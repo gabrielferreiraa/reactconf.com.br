@@ -22,7 +22,7 @@
     "prettier": "^1.5.3",
     "react-scripts": "1.0.7"
   },
-  "homepage": "https://reactconfbr.com.br/",
+  "homepage": "https://reactconf.com.br/",
   "lint-staged": {
     "*.js": [
       "prettier --write --single-quote true --trailing-comma all --print-width 80",

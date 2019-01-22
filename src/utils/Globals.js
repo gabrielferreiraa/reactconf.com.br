@@ -7,9 +7,9 @@ const Globals = {
   },
 
   date: {
-    year: 2018,
-    full: '20 Outubro 2018',
-    hour: 'Sábado, das 8h às 18h',
+    year: 2019,
+    full: 'em breve mais informações',
+    hour: '',
   },
 
   colors: {

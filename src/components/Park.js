@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { css } from 'glamor';
 
 import Globals from '../utils/Globals';
-import imgTheater from '../media/images/theater-brigadeiro.jpg';
+//import imgTheater from '../media/images/theater-brigadeiro.jpg';
 import Text from './Text';
 
 const styles = {

@@ -35,8 +35,8 @@ const Header = () =>
   <div {...styles.container}>
     <Title />
     <Logo />
-    <Ingresso />
     <Infos />
   </div>;
+//<Ingresso />
 
 export default Header;

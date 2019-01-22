@@ -51,7 +51,7 @@ class TextSC4P extends PureComponent {
             rel="noopener noreferrer"
             {...styles.link}
           >*/}
-          <b {...styles.link}>Submissões encerradas</b>
+          <b {...styles.link}>Início em 10 de Fevereiro</b>
           {/*</a>*/}
         </Text>
       </div>
