@@ -90,12 +90,8 @@ class TextPitch extends PureComponent {
             <div {...styles.imgContainer}>
               <img src={imgEvent} alt="Meetup React SP na Pagar.me" />
             </div>
-            <p {...styles.textContainer}>
-              {Globals.event.text}
-            </p>
-            <p {...styles.subtitleContainer}>
-              {Globals.event.subtitle}
-            </p>
+            <p {...styles.textContainer}>{Globals.event.text}</p>
+            <p {...styles.subtitleContainer}>{Globals.event.subtitle}</p>
           </Text>
         </div>
 
@@ -104,7 +100,7 @@ class TextPitch extends PureComponent {
           {...styles.afterMovie}
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/N-vACHJypCM?rel=0&amp;showinfo=0"
+          src="https://www.youtube.com/embed/x9K78rfG3bo?rel=0&amp;showinfo=0"
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen

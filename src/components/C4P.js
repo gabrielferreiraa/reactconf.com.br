@@ -38,6 +38,24 @@ const styles = {
       fontSize: '20px',
     },
   }),
+  papersbtn: css({
+    color: Globals.colors.white,
+    fontSize: 26,
+    textAlign: 'center',
+    maxWidth: 300,
+    borderRadius: 4,
+    padding: '10px 20px',
+    backgroundColor: '#B281FF',
+    border: `1px solid ${Globals.colors.white}`,
+    display: 'block',
+    margin: '4em auto',
+    textDecoration: 'none',
+    ':not(.is-disabled):hover': {
+      backgroundColor: Globals.colors.white,
+      border: `1px solid ${Globals.colors.main}`,
+      color: Globals.colors.main,
+    },
+  }),
 };
 
 class TextSC4P extends PureComponent {
@@ -45,14 +63,17 @@ class TextSC4P extends PureComponent {
     return (
       <div {...styles.container}>
         <Text title="CALL FOR PAPERS" /*subtitle="SEJA UM PALESTRANTE"*/>
-          {/*  <br />
+          {/*  <br />*/}
           <a
             target="_blank"
             rel="noopener noreferrer"
             {...styles.link}
-          >*/}
-          <b {...styles.link}>Início em 10 de Fevereiro</b>
-          {/*</a>*/}
+            href="https://forms.gle/yf1fyX87Rksvi6Sb6"
+            {...styles.papersbtn}
+          >
+            {/* <b {...styles.link}>Início em 10 de Fevereiro</b> */}
+            Início em 10 de Fevereiro
+          </a>
         </Text>
       </div>
     );

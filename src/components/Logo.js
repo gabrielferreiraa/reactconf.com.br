@@ -20,6 +20,7 @@ class Logo extends Component {
   };
 
   renderLogo = () => logoPaths[this.state.logoNumber];
+  // renderLogo = () => logoPaths[0];
 
   render() {
     return this.renderLogo();

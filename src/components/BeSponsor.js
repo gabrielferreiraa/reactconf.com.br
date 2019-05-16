@@ -25,7 +25,7 @@ const styles = {
     backgroundColor: Globals.colors.main,
     border: `1px solid ${Globals.colors.white}`,
     display: 'block',
-    margin: '4em auto',
+    margin: '0 auto 4em auto',
     textDecoration: 'none',
     ':not(.is-disabled):hover': {
       backgroundColor: Globals.colors.white,

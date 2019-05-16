@@ -5,17 +5,18 @@ import Globals from '../utils/Globals';
 import Logo from './Logo';
 import Infos from './Infos';
 import Title from './Title';
-import Ingresso from './Ingresso';
+// import Ingresso from './Ingresso';
 
-import macacoImg from '../media/images/macaco.jpg';
+import vaporWave from '../media/images/vaporwave.jpg';
 
 const styles = {
   container: css({
-    backgroundImage: `url('${macacoImg}')`,
+    backgroundImage: `url('${vaporWave}')`,
     backgroundRepeat: 'no-repeat',
-    backgroundColor: Globals.colors.backgroundHeader,
-    backgroundSize: '80%',
-    backgroundPosition: '160% 10px',
+    // backgroundColor: Globals.colors.backgroundHeader,
+    backgroundColor: 'black',
+    backgroundSize: '100%',
+    // backgroundPosition: '160% 10px',
     color: Globals.colors.primary,
     width: '100%',
     minWidth: '100%',
@@ -31,12 +32,13 @@ const styles = {
   }),
 };
 
-const Header = () =>
+const Header = () => (
   <div {...styles.container}>
     <Title />
     <Logo />
     <Infos />
-  </div>;
+  </div>
+);
 //<Ingresso />
 
 export default Header;
