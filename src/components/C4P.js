@@ -72,7 +72,7 @@ class TextSC4P extends PureComponent {
             {...styles.papersbtn}
           >
             {/* <b {...styles.link}>Início em 10 de Fevereiro</b> */}
-            Início em 10 de Fevereiro
+            Envie sua talk
           </a>
         </Text>
       </div>
