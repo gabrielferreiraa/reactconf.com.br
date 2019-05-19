@@ -1,15 +1,15 @@
 const Globals = {
   location: {
     city: 'São Paulo, Brasil',
-    locale: 'Teatro Augusta',
-    address: 'Rua Augusta, 943',
+    locale: 'Teatro APCD',
+    address: 'Rua Voluntários da Pátria, 547 - Santana',
     country: 'Brasil',
   },
 
   date: {
     year: 2019,
-    full: 'em breve mais informações',
-    hour: '',
+    full: '19 de Outubro de 2019',
+    hour: '07:30 às 18:00',
   },
 
   colors: {

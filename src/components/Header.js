@@ -5,7 +5,7 @@ import Globals from '../utils/Globals';
 import Logo from './Logo';
 import Infos from './Infos';
 import Title from './Title';
-// import Ingresso from './Ingresso';
+import Ingresso from './Ingresso';
 
 import vaporWave from '../media/images/vaporwave.jpg';
 
@@ -35,6 +35,7 @@ const styles = {
 const Header = () => (
   <div {...styles.container}>
     <Title />
+    <Ingresso />
     <Logo />
     <Infos />
   </div>

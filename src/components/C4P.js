@@ -7,7 +7,7 @@ import Text from './Text';
 const styles = {
   container: css({
     alignSelf: 'flex-end',
-    background: '#FFFFFF',
+    background: '#d9d9d9',
     width: '100vw',
     display: 'flex',
     '@media(max-width: 720px)': {
@@ -45,7 +45,7 @@ const styles = {
     maxWidth: 300,
     borderRadius: 4,
     padding: '10px 20px',
-    backgroundColor: '#B281FF',
+    backgroundColor: '#00ACFF',
     border: `1px solid ${Globals.colors.white}`,
     display: 'block',
     margin: '4em auto',

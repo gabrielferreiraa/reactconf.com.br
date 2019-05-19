@@ -17,7 +17,7 @@ const styles = {
   link: css({
     color: Globals.colors.background,
     padding: '10px 30px',
-    background: Globals.colors.main,
+    background: '#FA46FF',
     border: `1px solid ${Globals.colors.transparent}`,
     cursor: 'pointer',
     fontWeight: 'lighter',
@@ -29,8 +29,8 @@ const styles = {
     borderRadius: 4,
     ':not(.is-disabled):hover': {
       backgroundColor: Globals.colors.transparent,
-      color: Globals.colors.main,
-      border: `1px solid ${Globals.colors.main}`,
+      color: '#FA46FF',
+      border: `1px solid #FA46FF`,
     },
     '&.is-disabled': {
       backgroundColor: Globals.colors.gray,
@@ -53,12 +53,12 @@ class Ingresso extends PureComponent {
     return (
       <div {...styles.container}>
         <a
-          href="https://goo.gl/forms/F9FV7LQ5LRT68Zom2"
+          href="https://www.ingresse.com/reactconfbr"
           target="_blank"
           rel="noopener noreferrer"
           {...styles.link}
         >
-          <b>Lista de espera</b>
+          <b>Ingressos aqui</b>
         </a>
       </div>
     );

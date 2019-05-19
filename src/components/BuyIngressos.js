@@ -7,7 +7,7 @@ import Text from './Text';
 const styles = {
   container: css({
     alignSelf: 'flex-end',
-    background: Globals.colors.secondary,
+    background: '#FA46FF',
     width: '100vw',
     display: 'flex',
     color: Globals.colors.white,
@@ -23,7 +23,7 @@ const styles = {
     maxWidth: 400,
     fontSize: 22,
     display: 'inline-block',
-    fontWeight: 'lighter',
+    fontWeight: 'bold',
     margin: '0 auto 2em auto',
     background: Globals.colors.main,
     cursor: 'pointer',
@@ -50,16 +50,16 @@ class TextBuyIngressos extends PureComponent {
   render() {
     return (
       <div {...styles.container}>
-        <Text title="20 Outubro 2018" subtitle="Sábado, das 7h30 às 18h">
+        <Text title="19 Outubro 2019" subtitle="Sábado, das 7h30 às 18h">
           <br />
           <a
-            href=""
+            href="https://www.ingresse.com/reactconfbr"
             target="_blank"
-            className="is-disabled"
+            className=""
             rel="noopener noreferrer"
             {...styles.link}
           >
-            Ingressos esgotados!
+            Ingressos aqui
           </a>
         </Text>
       </div>

@@ -10,9 +10,10 @@ import quantoImg from '../media/images/sponsors/quanto.jpg';
 import telnyxImg from '../media/images/sponsors/telnyx.svg';
 import maxmilhasImg from '../media/images/sponsors/maxmilhas.svg';
 import vagasImg from '../media/images/sponsors/vagas.svg';
-import creditasImg from '../media/images/sponsors/Logo_Creditas.svg';
+// import creditasImg from '../media/images/sponsors/Logo_Creditas.svg';
 import moteefeImg from '../media/images/sponsors/moteefe.png';
 import daitanGroupImg from '../media/images/sponsors/daitanGroup.png';
+import ingresseImg from '../media/images/sponsors/ingresse.png';
 
 const styles = {
   container: css({
@@ -68,68 +69,68 @@ const styles = {
 
 //const Senior = [];
 
-const Plenos = [
-  {
-    id: 1,
-    name: 'Telnyx',
-    avatar: telnyxImg,
-    link: 'https://telnyx.com/',
-  },
-  {
-    id: 2,
-    name: 'Daitan Group',
-    avatar: daitanGroupImg,
-    link: 'https://www.daitangroup.com/',
-  },
-];
+// const Plenos = [
+//   {
+//     id: 1,
+//     name: 'Telnyx',
+//     avatar: telnyxImg,
+//     link: 'https://telnyx.com/',
+//   },
+//   {
+//     id: 2,
+//     name: 'Daitan Group',
+//     avatar: daitanGroupImg,
+//     link: 'https://www.daitangroup.com/',
+//   },
+// ];
 
 const Juniors = [
   {
     id: 3,
-    name: 'Creditas',
-    avatar: creditasImg,
-    link: 'http://www.creditas.com.br',
-  },
-  {
-    id: 4,
-    name: 'MaxMilhas',
-    avatar: maxmilhasImg,
-    link: 'http://www.maxmilhas.com.br',
-  },
-  {
-    id: 5,
-    name: 'VAGAS.com.br',
-    avatar: vagasImg,
-    link: 'http://www.vagas.com.br',
-  },
-];
-
-const Padawans = [
-  {
-    id: 6,
-    name: 'Globo.com',
-    avatar: globoImg,
-    link: 'http://www.globo.com',
-  },
-  {
-    id: 7,
     name: 'Quanto',
     avatar: quantoImg,
     link: 'http://contaquanto.com.br',
   },
   {
-    id: 8,
-    name: 'Pipefy',
-    avatar: pipefyImg,
-    link: 'https://www.pipefy.com',
+    id: 4,
+    name: 'Ingresse',
+    avatar: ingresseImg,
+    link: 'https://www.ingresse.com/',
   },
-  {
-    id: 9,
-    name: 'Moteefe',
-    avatar: moteefeImg,
-    link: 'https://www.moteefe.com',
-  },
+  // {
+  //   id: 5,
+  //   name: 'VAGAS.com.br',
+  //   avatar: vagasImg,
+  //   link: 'http://www.vagas.com.br',
+  // },
 ];
+
+// const Padawans = [
+//   {
+//     id: 6,
+//     name: 'Globo.com',
+//     avatar: globoImg,
+//     link: 'http://www.globo.com',
+//   },
+//   {
+//     id: 7,
+//     name: 'Quanto',
+//     avatar: quantoImg,
+//     link: 'http://contaquanto.com.br',
+//   },
+//   {
+//     id: 8,
+//     name: 'Pipefy',
+//     avatar: pipefyImg,
+//     link: 'https://www.pipefy.com',
+//   },
+//   {
+//     id: 9,
+//     name: 'Moteefe',
+//     avatar: moteefeImg,
+//     link: 'https://www.moteefe.com',
+//   },
+// ];
 
 class TextSponsor extends PureComponent {
   render() {
@@ -137,7 +138,7 @@ class TextSponsor extends PureComponent {
       return (
         <div {...styles.container}>
           <Text title="Patrocínio" />
-          <div {...styles.cards}>
+          {/* <div {...styles.cards}>
             {Plenos.map(pleno => {
               return (
                 <div key={pleno.id} {...styles.card}>
@@ -158,7 +159,7 @@ class TextSponsor extends PureComponent {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           <div {...styles.cards}>
             {Juniors.map(junior => {
@@ -182,7 +183,7 @@ class TextSponsor extends PureComponent {
               );
             })}
           </div>
-          {Padawans &&
+          {/* {Padawans &&
             <div {...styles.cards}>
               {Padawans.map(padawan => {
                 return (
@@ -200,7 +201,7 @@ class TextSponsor extends PureComponent {
                   </div>
                 );
               })}
-            </div>}
+            </div>} */}
         </div>
       );
     } else {

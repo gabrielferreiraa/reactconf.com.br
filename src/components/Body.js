@@ -33,18 +33,18 @@ class App extends PureComponent {
     return (
       <div {...styles.container}>
         <Event />
-        {/* <Venue /> */}
+        <Venue />
         {/* <Park /> */}
         {/* <Speakers /> */}
         {/* <Schedule /> */}
         <TextSC4P />
-        {/* <TextSponsor /> */}
+        <TextSponsor />
         <BeSponsor />
         {/* <Supporters /> */}
         {/* <Promotions /> */}
         {/* <AfterParty />*/}
         <Meetup />
-        {/* <BuyIngressos /> */}
+        <BuyIngressos />
         <Contact />
       </div>
     );
