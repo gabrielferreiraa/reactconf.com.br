@@ -1,8 +1,7 @@
 {
-  "main.js": "static/js/main.297f4e16.js",
-  "main.js.map": "static/js/main.297f4e16.js.map",
+  "main.js": "static/js/main.cca1eb8b.js",
+  "main.js.map": "static/js/main.cca1eb8b.js.map",
   "static\\media\\Larissa.jpg": "static/media/Larissa.06b8acf3.jpg",
-  "static\\media\\Logo_Creditas.svg": "static/media/Logo_Creditas.f6d5d57c.svg",
   "static\\media\\Marcelo.jpeg": "static/media/Marcelo.59e6a45b.jpeg",
   "static\\media\\Maria.jpeg": "static/media/Maria.c8fe41f0.jpeg",
   "static\\media\\Nicholas.jpg": "static/media/Nicholas.5b56b883.jpg",
@@ -18,6 +17,7 @@
   "static\\media\\hugoBessa.jpg": "static/media/hugoBessa.f2242a48.jpg",
   "static\\media\\iclinic.png": "static/media/iclinic.5658015c.png",
   "static\\media\\infoqbrasil.png": "static/media/infoqbrasil.a647cb48.png",
+  "static\\media\\ingresse.png": "static/media/ingresse.d561eb38.png",
   "static\\media\\jsladies.png": "static/media/jsladies.7c3c42c6.png",
   "static\\media\\luizCamargo.png": "static/media/luizCamargo.a4aad684.png",
   "static\\media\\matheus.jpg": "static/media/matheus.72a560b7.jpg",
@@ -33,8 +33,8 @@
   "static\\media\\rung.jpg": "static/media/rung.5f6883ec.jpg",
   "static\\media\\sibelius.jpg": "static/media/sibelius.8aa73503.jpg",
   "static\\media\\tailLogo.svg": "static/media/tailLogo.0710770a.svg",
+  "static\\media\\teatro_apcd.jpeg": "static/media/teatro_apcd.8c1a1ab4.jpeg",
   "static\\media\\telnyx.svg": "static/media/telnyx.adc10446.svg",
-  "static\\media\\theater-brigadeiro.jpg": "static/media/theater-brigadeiro.daf8b433.jpg",
   "static\\media\\vagas.svg": "static/media/vagas.fc267672.svg",
   "static\\media\\vaporwave.jpg": "static/media/vaporwave.eeeba9c5.jpg"
 }
