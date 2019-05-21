@@ -84,10 +84,10 @@ const Padawans = ({ data }) => <SponsorCard data={data} type="padawan" />;
 const Sponsors = () =>
   <div {...styles.container}>
     <Text title="Patrocínio" />
-    {seniors.length && <Seniors data={seniors} />}
-    {plenos.length && <Plenos data={plenos} />}
-    {juniors.length && <Juniors data={juniors} />}
-    {padawans.length && <Padawans data={padawans} />}
+    {!!seniors.length && <Seniors data={seniors} />}
+    {!!plenos.length && <Plenos data={plenos} />}
+    {!!juniors.length && <Juniors data={juniors} />}
+    {!!padawans.length && <Padawans data={padawans} />}
   </div>;
 
 export default Sponsors;

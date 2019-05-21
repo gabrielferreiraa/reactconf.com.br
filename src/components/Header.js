@@ -21,9 +21,8 @@ const styles = {
     flexDirection: 'column',
     height: '100vh',
     justifyContent: 'space-between',
-    '@media(max-width: 720px)': {
-      backgroundSize: 'cover',
-      backgroundPosition: '30% 100px',
+    '@media(max-width: 480px)': {
+      backgroundPosition: 'left',
     },
   }),
 };

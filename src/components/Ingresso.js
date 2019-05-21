@@ -26,8 +26,10 @@ const styles = {
     top: '35px',
     right: '30px',
     fontSize: 16,
-    borderRadius: 4,
+    borderRadius: 22,
+    transition: 'background-color 200ms ease',
     ':not(.is-disabled):hover': {
+      transition: 'background-color 200ms ease',
       backgroundColor: Globals.colors.transparent,
       color: '#FA46FF',
       border: `2px solid #FA46FF`,
