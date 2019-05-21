@@ -43,14 +43,15 @@ class TextVenue extends PureComponent {
   render() {
     return (
       <div {...styles.container}>
-        <Text title="Local" subtitle="Teatro APCD, São Paulo, Brasil">
-          {/* <p>
-            Uma das mais tradicionais casas de espetáculo de São Paulo será
-            palco da 3ª React Conf Brasil
-          </p> */}
+        <Text
+          title="Local"
+          subtitle={`${Globals.location.locale}, ${Globals.location.city}`}
+        >
           <img src={imgTheater} alt="Teatro APCD" title="Teatro APCD" />
           <small {...styles.small}>Foto: Divulgação</small>
-          <p>Rua Voluntários da Pátria, 547 - Santana, São Paulo - SP</p>
+          <p>
+            {Globals.location.address}, São Paulo - SP
+          </p>
           <p>
             <a
               {...styles.mediumBtn}
