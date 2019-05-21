@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { css } from 'glamor';
 import Globals from '../utils/Globals';
 
@@ -7,7 +7,7 @@ import Venue from './Venue';
 import Park from './Park';
 import Speakers from './Speakers';
 import Schedule from './Schedule';
-import TextSC4P from './C4P';
+import C4P from './C4P';
 import TextSponsor from './Sponsor';
 import Supporters from './Supporters';
 import Promotions from './Promotions';
@@ -28,27 +28,22 @@ const styles = {
   }),
 };
 
-class App extends PureComponent {
-  render() {
-    return (
-      <div {...styles.container}>
-        <Event />
-        <Venue />
-        {/* <Park /> */}
-        {/* <Speakers /> */}
-        {/* <Schedule /> */}
-        <TextSC4P />
-        <TextSponsor />
-        <BeSponsor />
-        {/* <Supporters /> */}
-        {/* <Promotions /> */}
-        {/* <AfterParty />*/}
-        <Meetup />
-        <BuyIngressos />
-        <Contact />
-      </div>
-    );
-  }
-}
+const App = () =>
+  <div {...styles.container}>
+    <Event />
+    <Venue />
+    {/* <Park /> */}
+    <Speakers />
+    {/* <Schedule /> */}
+    <C4P />
+    <TextSponsor />
+    <BeSponsor />
+    {/* <Supporters /> */}
+    {/* <Promotions /> */}
+    {/* <AfterParty />*/}
+    <Meetup />
+    <BuyIngressos />
+    <Contact />
+  </div>;
 
 export default App;

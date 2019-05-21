@@ -6,7 +6,7 @@ import Item from './Item';
 
 const styles = {
   container: css({
-    background: Globals.colors.background,
+    background: Globals.colors.primary,
     color: Globals.colors.white,
     width: '100%',
     flexDirection: 'column',
@@ -34,7 +34,7 @@ const styles = {
   }),
 
   link: css({
-    color: Globals.colors.main,
+    color: Globals.colors.secondary,
     textDecoration: 'none',
   }),
 

@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 import { css } from 'glamor';
 import Globals from '../utils/Globals';
-import imgEvent from '../media/images/reactconfbr2017.jpg';
-// import imgEvent from "../media/images/reactconfbr-event.jpg";
+import imgEvent from '../media/images/reactconfbr.jpg';
 
 import Text from './Text';
 
@@ -88,7 +87,7 @@ class TextPitch extends PureComponent {
             </h3>
             <div />
             <div {...styles.imgContainer}>
-              <img src={imgEvent} alt="React Conf no Teatro Augusta" />
+              <img src={imgEvent} alt="React Conf 2018" />
             </div>
             <p {...styles.textContainer}>
               {Globals.event.text}
