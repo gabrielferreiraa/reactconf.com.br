@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { css } from 'glamor';
 
 import Text from '../Text';
