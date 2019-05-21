@@ -20,7 +20,7 @@ const styles = {
     },
   }),
   link: css({
-    color: 'black',
+    color: Globals.colors.primary,
   }),
   transition: css({
     transition: Globals.transitions.primary,

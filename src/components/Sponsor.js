@@ -1,19 +1,8 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { css } from 'glamor';
 import Globals from '../utils/Globals';
-
+import { seniors, plenos, juniors, padawans } from '../utils/Sponsors';
 import Text from './Text';
-
-import globoImg from '../media/images/sponsors/globo.jpg';
-import pipefyImg from '../media/images/sponsors/pipefy.jpg';
-import quantoImg from '../media/images/sponsors/quanto.jpg';
-import telnyxImg from '../media/images/sponsors/telnyx.svg';
-import maxmilhasImg from '../media/images/sponsors/maxmilhas.svg';
-import vagasImg from '../media/images/sponsors/vagas.svg';
-// import creditasImg from '../media/images/sponsors/Logo_Creditas.svg';
-import moteefeImg from '../media/images/sponsors/moteefe.png';
-import daitanGroupImg from '../media/images/sponsors/daitanGroup.png';
-import ingresseImg from '../media/images/sponsors/ingresse.png';
 
 const styles = {
   container: css({
@@ -67,147 +56,38 @@ const styles = {
   }),
 };
 
-//const Senior = [];
+const SponsorCard = ({ data, type }) =>
+  <div {...styles.cards}>
+    {data.map(sponsor =>
+      <div key={sponsor.id} {...styles.card}>
+        <a
+          href={sponsor.link + Globals.utm}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={sponsor.avatar}
+            title={sponsor.name}
+            alt={sponsor.name}
+            className={type}
+          />
+        </a>
+      </div>,
+    )}
+  </div>;
 
-// const Plenos = [
-//   {
-//     id: 1,
-//     name: 'Telnyx',
-//     avatar: telnyxImg,
-//     link: 'https://telnyx.com/',
-//   },
-//   {
-//     id: 2,
-//     name: 'Daitan Group',
-//     avatar: daitanGroupImg,
-//     link: 'https://www.daitangroup.com/',
-//   },
-// ];
+const Seniors = ({ data }) => <SponsorCard data={data} type="senior" />;
+const Plenos = ({ data }) => <SponsorCard data={data} type="pleno" />;
+const Juniors = ({ data }) => <SponsorCard data={data} type="junior" />;
+const Padawans = ({ data }) => <SponsorCard data={data} type="padawan" />;
 
-const Juniors = [
-  {
-    id: 3,
-    name: 'Quanto',
-    avatar: quantoImg,
-    link: 'http://contaquanto.com.br',
-  },
-  {
-    id: 4,
-    name: 'Ingresse',
-    avatar: ingresseImg,
-    link: 'https://www.ingresse.com/',
-  },
-  // {
-  //   id: 5,
-  //   name: 'VAGAS.com.br',
-  //   avatar: vagasImg,
-  //   link: 'http://www.vagas.com.br',
-  // },
-];
+const Sponsors = () =>
+  <div {...styles.container}>
+    <Text title="Patrocínio" />
+    {seniors.length && <Seniors data={seniors} />}
+    {plenos.length && <Plenos data={plenos} />}
+    {juniors.length && <Juniors data={juniors} />}
+    {padawans.length && <Padawans data={padawans} />}
+  </div>;
 
-// const Padawans = [
-//   {
-//     id: 6,
-//     name: 'Globo.com',
-//     avatar: globoImg,
-//     link: 'http://www.globo.com',
-//   },
-//   {
-//     id: 7,
-//     name: 'Quanto',
-//     avatar: quantoImg,
-//     link: 'http://contaquanto.com.br',
-//   },
-//   {
-//     id: 8,
-//     name: 'Pipefy',
-//     avatar: pipefyImg,
-//     link: 'https://www.pipefy.com',
-//   },
-//   {
-//     id: 9,
-//     name: 'Moteefe',
-//     avatar: moteefeImg,
-//     link: 'https://www.moteefe.com',
-//   },
-// ];
-
-class TextSponsor extends PureComponent {
-  render() {
-    if (Juniors.length) {
-      return (
-        <div {...styles.container}>
-          <Text title="Patrocínio" />
-          {/* <div {...styles.cards}>
-            {Plenos.map(pleno => {
-              return (
-                <div key={pleno.id} {...styles.card}>
-                  <a
-                    href={
-                      pleno.link +
-                      '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={pleno.avatar}
-                      alt={pleno.name}
-                      className="pleno"
-                    />
-                  </a>
-                </div>
-              );
-            })}
-          </div> */}
-
-          <div {...styles.cards}>
-            {Juniors.map(junior => {
-              return (
-                <div key={junior.id} {...styles.card}>
-                  <a
-                    href={
-                      junior.link +
-                      '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={junior.avatar}
-                      alt={junior.name}
-                      className="junior"
-                    />
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-          {/* {Padawans &&
-            <div {...styles.cards}>
-              {Padawans.map(padawan => {
-                return (
-                  <div key={padawan.id} {...styles.card}>
-                    <a
-                      href={
-                        padawan.link +
-                        '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={padawan.avatar} alt={padawan.name} />
-                    </a>
-                  </div>
-                );
-              })}
-            </div>} */}
-        </div>
-      );
-    } else {
-      return false;
-    }
-  }
-}
-
-export default TextSponsor;
+export default Sponsors;
