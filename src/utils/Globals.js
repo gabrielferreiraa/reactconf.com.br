@@ -10,6 +10,7 @@ const Globals = {
     year: 2019,
     full: '19 de Outubro de 2019',
     hour: '07:30 às 18:00',
+    weekDay: 'Sábado',
   },
 
   colors: {
@@ -19,7 +20,7 @@ const Globals = {
     main: '#00A9FF',
     midMain: '#003F5F',
     lightMain: '#BFCAFE',
-    primary: '#222',
+    primary: '#220132',
     header: '#222',
     secondary: '#555555',
     subheader: '#555555',
@@ -61,6 +62,11 @@ const Globals = {
     email: 'reactconfbr@gmail.com',
     repo: 'https://github.com/nic/reactconf.com.br',
   },
+
+  utm:
+    '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2019',
+
+  buyTicketLink: 'https://www.ingresse.com/reactconfbr',
 };
 
 export default Globals;

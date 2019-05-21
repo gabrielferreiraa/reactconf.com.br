@@ -11,8 +11,8 @@ import vaporWave from '../media/images/vaporwave.jpg';
 
 const styles = {
   container: css({
-    background: `url(https://i1.wp.com/wallur.com/wp-content/uploads/2016/12/synthwave-background-7.jpg?fit=1920%2C1080) no-repeat bottom / cover`,
-    backgroundColor: 'black',
+    background: `url('${vaporWave}') no-repeat center / cover`,
+    backgroundColor: '#220132',
     color: Globals.colors.primary,
     width: '100%',
     minWidth: '100%',

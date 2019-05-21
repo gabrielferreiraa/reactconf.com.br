@@ -18,7 +18,7 @@ const styles = {
     color: Globals.colors.background,
     padding: '10px 30px',
     background: '#FA46FF',
-    border: `1px solid ${Globals.colors.transparent}`,
+    border: `2px solid ${Globals.colors.transparent}`,
     cursor: 'pointer',
     fontWeight: 'lighter',
     textDecoration: 'none',
@@ -30,7 +30,7 @@ const styles = {
     ':not(.is-disabled):hover': {
       backgroundColor: Globals.colors.transparent,
       color: '#FA46FF',
-      border: `1px solid #FA46FF`,
+      border: `2px solid #FA46FF`,
     },
     '&.is-disabled': {
       backgroundColor: Globals.colors.gray,
@@ -53,7 +53,7 @@ class Ingresso extends PureComponent {
     return (
       <div {...styles.container}>
         <a
-          href="https://www.ingresse.com/reactconfbr"
+          href={Globals.buyTicketLink}
           target="_blank"
           rel="noopener noreferrer"
           {...styles.link}

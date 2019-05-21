@@ -88,10 +88,14 @@ class TextPitch extends PureComponent {
             </h3>
             <div />
             <div {...styles.imgContainer}>
-              <img src={imgEvent} alt="Meetup React SP na Pagar.me" />
+              <img src={imgEvent} alt="React Conf no Teatro Augusta" />
             </div>
-            <p {...styles.textContainer}>{Globals.event.text}</p>
-            <p {...styles.subtitleContainer}>{Globals.event.subtitle}</p>
+            <p {...styles.textContainer}>
+              {Globals.event.text}
+            </p>
+            <p {...styles.subtitleContainer}>
+              {Globals.event.subtitle}
+            </p>
           </Text>
         </div>
 

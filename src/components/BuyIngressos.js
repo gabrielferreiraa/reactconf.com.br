@@ -50,12 +50,14 @@ class TextBuyIngressos extends PureComponent {
   render() {
     return (
       <div {...styles.container}>
-        <Text title="19 Outubro 2019" subtitle="Sábado, das 7h30 às 18h">
+        <Text
+          title={Globals.date.full}
+          subtitle={`${Globals.date.weekDay}, das ${Globals.date.hour}`}
+        >
           <br />
           <a
-            href="https://www.ingresse.com/reactconfbr"
+            href={Globals.buyTicketLink}
             target="_blank"
-            className=""
             rel="noopener noreferrer"
             {...styles.link}
           >

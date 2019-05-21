@@ -10,6 +10,8 @@ const styles = {
     maxWidth: 1000,
     margin: '2em auto',
     textAlign: 'center',
+    color: Globals.colors.primary,
+
     '> h1': {
       fontSize: '3.998em',
       margin: '1em',
