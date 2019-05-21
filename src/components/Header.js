@@ -11,12 +11,8 @@ import vaporWave from '../media/images/vaporwave.jpg';
 
 const styles = {
   container: css({
-    backgroundImage: `url('${vaporWave}')`,
-    backgroundRepeat: 'no-repeat',
-    // backgroundColor: Globals.colors.backgroundHeader,
+    background: `url(https://i1.wp.com/wallur.com/wp-content/uploads/2016/12/synthwave-background-7.jpg?fit=1920%2C1080) no-repeat bottom / cover`,
     backgroundColor: 'black',
-    backgroundSize: '100%',
-    // backgroundPosition: '160% 10px',
     color: Globals.colors.primary,
     width: '100%',
     minWidth: '100%',
@@ -32,14 +28,13 @@ const styles = {
   }),
 };
 
-const Header = () => (
+const Header = () =>
   <div {...styles.container}>
     <Title />
     <Ingresso />
     <Logo />
     <Infos />
-  </div>
-);
+  </div>;
 //<Ingresso />
 
 export default Header;

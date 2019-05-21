@@ -33,7 +33,9 @@ const Globals = {
     backgroundHeader: '#080c27',
   },
 
-  fonts: {},
+  fonts: {
+    default: 'Rajdhani, sans-serif',
+  },
 
   transitions: {
     primary: 'all 100ms linear',
@@ -49,6 +51,15 @@ const Globals = {
   topics: {
     title: 'O QUE QUEREMOS VER',
     text: 'Votação no GitHub propondo assuntos:',
+  },
+
+  contacts: {
+    slack: 'https://react.now.sh',
+    twitter: 'http://twitter.com/reactconfbr',
+    github: 'https://github.com/react-brasil',
+    facebook: 'https://www.facebook.com/reactconf/',
+    email: 'reactconfbr@gmail.com',
+    repo: 'https://github.com/nic/reactconf.com.br',
   },
 };
 

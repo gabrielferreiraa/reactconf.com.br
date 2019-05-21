@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 css.global('html, body', {
   padding: 0,
   margin: 0,
-  fontFamily: 'Rajdhani, sans-serif',
+  fontFamily: Globals.fonts.default,
   background: Globals.colors.transparent,
   overflowX: 'hidden',
 });

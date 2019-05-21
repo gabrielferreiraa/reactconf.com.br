@@ -77,7 +77,7 @@ class BeSponsor extends PureComponent {
         <p>
           <a
             {...styles.sponsorbtn}
-            href="mailto:reactconfbr@gmail.com"
+            href={`mailto:${Globals.contacts.email}`}
             target="_blank"
             rel="noopener noreferrer"
           >
