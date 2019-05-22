@@ -22,35 +22,6 @@ const styles = {
   link: css({
     color: '#666666',
   }),
-  locale: css({
-    fontSize: '1em',
-    fontWeight: 'lighter',
-    textAlign: 'center',
-    margin: '0 0 0.33em 0',
-    '> a': {
-      textDecoration: 'none',
-      color: '#555',
-      fontWeight: 'bold',
-    },
-  }),
-  theme: css({
-    fontSize: '1.2em',
-    color: Globals.colors.subheader,
-    margin: '0 0 0.33em 0',
-    textAlign: 'center',
-    fontWeight: 'lighter',
-    '@media(max-width: 720px)': {
-      fontSize: '1.4em',
-    },
-    '> a': {
-      color: Globals.colors.secondary,
-      textDecoration: 'none',
-    },
-    '> a:hover': {
-      color: Globals.colors.subheader,
-      textDecoration: 'underline',
-    },
-  }),
   card: css({
     width: 230,
     maxWidth: '100%',
@@ -96,6 +67,7 @@ const Speakers = () => {
           />,
         )}
       </Cards>
+
       <ModalVideo
         channel="youtube"
         isOpen={isOpen}

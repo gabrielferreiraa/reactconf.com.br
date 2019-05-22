@@ -1,3 +1,4 @@
+import you from '../media/images/speakers/anonymous.png';
 import PedroNauckImg from '../media/images/speakers/pedroNauck.jpg';
 import LarissaImg from '../media/images/speakers/Larissa.jpg';
 import NicholasImg from '../media/images/speakers/Nicholas.jpg';
@@ -15,16 +16,32 @@ import sibeliusImg from '../media/images/speakers/sibelius.jpg';
 import matheusImg from '../media/images/speakers/matheus.jpg';
 import renatoImg from '../media/images/speakers/renato.jpeg';
 
+/**
+ * Retorna um array com os palestrantes, exemplo:
+ * 
+ * {
+ *    id: 1, //ID de controle
+ *    name: '', //Nome do Palestrante
+ *    talk: '', //Link da talk
+ *    theme: '', //Tema da palestra
+ *    videoId: '', //ID do vídeo do Youtube
+ *    avatar: '', //Foto do palestrante
+ *    worksIn: '', //Nome do local de trabalho
+ *    worksLink: '', //URL do local de trabalho
+ *    github: '' //URL do github
+ * }
+ */
 export default [
   {
     id: 1,
-    name: 'Marcelo Camargo',
-    theme: 'ReasonML levado a sério',
-    videoId: '8fUVjPiwMIA',
-    avatar: MarceloImg,
-    worksIn: 'Rung',
-    worksLink: 'https://app.rung.com.br/',
-    github: 'https://github.com/haskellcamargo',
+    name: 'Você!',
+    theme: 'Envie sua talk',
+    // videoId: "8fUVjPiwMIA",
+    avatar: you,
+    worksIn: 'React Brasil',
+    worksLink: 'https://github.com/react-brasil/',
+    talk: 'https://forms.gle/yf1fyX87Rksvi6Sb6',
+    github: 'https://github.com/react-brasil/',
   },
   {
     id: 2,

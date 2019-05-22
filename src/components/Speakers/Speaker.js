@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Avatar from './Avatar';
 import Name from './Name';
+import WorksIn from './WorksIn';
+import Theme from './Theme';
 import Globals from '../../utils/Globals';
 
 const StyledSpeaker = styled.div`
@@ -17,23 +20,13 @@ const Speaker = ({ speaker, handleSpeakerClick }) =>
   <StyledSpeaker>
     <Avatar speaker={speaker} handleSpeakerClick={handleSpeakerClick} />
     <Name name={speaker.name} github={speaker.github} />
-    {/* <p {...styles.locale}>
-      {speaker.worksIn &&
-        speaker.worksIn.length &&
-        <a
-          href={speaker.worksLink}
-          rel="noopener noreferrer"
-          target="_blank"
-          className="notranslate"
-        >
-          @{speaker.worksIn}
-        </a>}
-    </p>
-    <h4 {...styles.theme} className="notranslate">
-      <a href={speaker.talk ? speaker.talk : "javascript:void(0)"}>
-        {speaker.theme}
-      </a>
-    </h4> */}
+    <WorksIn name={speaker.worksIn} link={speaker.worksLink} />
+    <Theme theme={speaker.theme} talk={!!speaker.talk ? speaker.talk : ''} />
   </StyledSpeaker>;
+
+Speaker.propTypes = {
+  speaker: PropTypes.object.isRequired,
+  handleSpeakerClick: PropTypes.func.isRequired,
+};
 
 export default Speaker;
