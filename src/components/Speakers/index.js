@@ -25,6 +25,7 @@ const Speakers = () => {
       <Cards>
         {speakers.map(speaker =>
           <Speaker
+            key={speaker.id}
             speaker={speaker}
             handleSpeakerClick={() => handleSpeakerClick(speaker)}
           />,

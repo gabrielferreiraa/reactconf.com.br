@@ -62,6 +62,7 @@ export default {
     email: 'reactconfbr@gmail.com',
     repo: 'https://github.com/nic/reactconf.com.br',
     c4p: 'https://forms.gle/yf1fyX87Rksvi6Sb6',
+    maps: 'https://goo.gl/maps/GBi9o1mJB23UAheN8',
   },
 
   utm:

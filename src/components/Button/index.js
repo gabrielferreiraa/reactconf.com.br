@@ -3,39 +3,79 @@ import PropTypes from 'prop-types';
 import Globals from '../../utils/Globals';
 import styled from 'styled-components';
 
+const { colors } = Globals;
+
 const disabledStyle = `
-    background-color: ${Globals.colors.gray};
-    color: ${Globals.colors.lightGray};
-    cursor: initial;
+  background-color: ${colors.gray};
+  color: ${colors.lightGray};
+  cursor: initial;
+  pointer-events: none;
+`;
+
+const defaultStyle = `
+  color: ${colors.primary};
+  background: ${colors.secondary};
+  border: 2px solid ${colors.transparent};
+  
+  &:hover {
+    background-color: ${colors.transparent};
+    color: ${colors.secondary};
+    border: 2px solid ${colors.secondary};
+  };
+`;
+
+const reverseStyle = `
+  color: ${colors.secondary};
+  background: ${colors.transparent};
+  border: 2px solid ${colors.secondary};
+
+  &:hover {
+    background-color: ${colors.secondary};
+    color: ${colors.primary};
+    border: 2px solid ${colors.secondary};
+  };
+`;
+
+const lightStyle = `
+  color: ${colors.primary};
+  background: ${colors.white};
+  border: 2px solid ${colors.transparent};
+
+  &:hover {
+    background-color: ${colors.primary};
+    color: ${colors.white};
+    border: 2px solid ${colors.transparent};
+  };
 `;
 
 const StyledButton = styled.a`
-  color: ${Globals.colors.background};
   padding: 10px 30px;
-  background: #fa46ff;
-  border: 2px solid ${Globals.colors.transparent};
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
   font-size: 1em;
   border-radius: 22px;
   transition: background-color 200ms ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  ${props => !!props.disabled && disabledStyle};
+  &:hover {
+    transition: background-color 200ms ease;
+  }
 
-  ${props =>
-    !props.disabled &&
-    `
-        &:hover {
-            transition: background-color 200ms ease;
-            background-color: ${Globals.colors.transparent};
-            color: #FA46FF;
-            border: 2px solid #FA46FF;
-        }
-    `};
+  ${props => {
+    if (props.disabled) {
+      return disabledStyle;
+    }
+
+    if (props.reverse) {
+      return reverseStyle;
+    }
+
+    if (props.light) {
+      return lightStyle;
+    }
+
+    return defaultStyle;
+  }};
 `;
 
 const Button = ({ children, ...props }) =>
@@ -45,6 +85,8 @@ const Button = ({ children, ...props }) =>
 
 Button.defaultProps = {
   disabled: false,
+  reverse: false,
+  light: false,
   target: '_blank',
   href: '',
 };
@@ -52,8 +94,10 @@ Button.defaultProps = {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string,
-  disabled: PropTypes.bool,
   target: PropTypes.string,
+  disabled: PropTypes.bool,
+  reverse: PropTypes.bool,
+  light: PropTypes.bool,
 };
 
 export default Button;
