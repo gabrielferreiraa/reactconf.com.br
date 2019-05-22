@@ -1,4 +1,4 @@
-const Globals = {
+export default {
   location: {
     city: 'São Paulo, Brasil',
     locale: 'Teatro APCD',
@@ -61,6 +61,7 @@ const Globals = {
     facebook: 'https://www.facebook.com/reactconf/',
     email: 'reactconfbr@gmail.com',
     repo: 'https://github.com/nic/reactconf.com.br',
+    c4p: 'https://forms.gle/yf1fyX87Rksvi6Sb6',
   },
 
   utm:
@@ -68,5 +69,3 @@ const Globals = {
 
   buyTicketLink: 'https://www.ingresse.com/reactconfbr',
 };
-
-export default Globals;

@@ -59,7 +59,7 @@ const C4P = () =>
         target="_blank"
         rel="noopener noreferrer"
         {...styles.link}
-        href="https://forms.gle/yf1fyX87Rksvi6Sb6"
+        href={Globals.contacts.c4p}
         {...styles.papersbtn}
       >
         Envie sua talk

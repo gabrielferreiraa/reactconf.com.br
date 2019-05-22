@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Globals from '../../utils/Globals';
 import ytIcon from '../../media/icons/ytIcon.png';
+import Webcam from 'react-webcam';
 
 const StyledAvatar = styled.a`
   background-image: url(${({ speaker }) => speaker.avatar});
@@ -17,6 +18,7 @@ const StyledAvatar = styled.a`
   transition: filter 300ms ease;
   border: 5px solid ${Globals.colors.primary};
   cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     filter: grayscale(0%);
@@ -25,10 +27,6 @@ const StyledAvatar = styled.a`
       opacity: 1;
     }
   }
-
-  @media (max-width: 720px) {
-    height: 300px;
-  }
 `;
 
 const YoutubeIcon = styled.img`
@@ -36,8 +34,14 @@ const YoutubeIcon = styled.img`
   height: 80px;
 `;
 
+const StyledWebcam = styled(Webcam)`
+    height: 230px;
+    border-radius: 50%;
+`;
+
 const Avatar = ({ speaker, handleSpeakerClick }) =>
   <StyledAvatar speaker={speaker} onClick={handleSpeakerClick}>
+    {!!speaker.isYou && <StyledWebcam audio={false} />}
     {!!speaker.videoId && <YoutubeIcon alt="youtube" src={ytIcon} />}
   </StyledAvatar>;
 

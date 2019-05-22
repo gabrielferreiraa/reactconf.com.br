@@ -8208,6 +8208,12 @@ react-video-cover@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-video-cover/-/react-video-cover-1.1.0.tgz#312da272436bfa5301fa098af57cbdf565a8fe89"
 
+react-webcam@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-1.1.1.tgz#03c69c4d61e36b817063504fc09541b4fff52d2e"
+  dependencies:
+    prop-types "^15.5.8"
+
 react@^15.3.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"

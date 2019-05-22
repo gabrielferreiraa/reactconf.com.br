@@ -35,7 +35,6 @@ const App = () =>
     {/* <Park /> */}
     <Speakers />
     {/* <Schedule /> */}
-    <C4P />
     <TextSponsor />
     <BeSponsor />
     {/* <Supporters /> */}
@@ -43,6 +42,7 @@ const App = () =>
     {/* <AfterParty />*/}
     <Meetup />
     <BuyIngressos />
+    <C4P />
     <Contact />
   </div>;
 
