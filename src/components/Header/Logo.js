@@ -1,30 +1,19 @@
-import { Component } from 'react';
+import { useState } from 'react';
+import useInterval from 'react-useinterval';
 
 import logoPaths from '../../utils/logoPaths';
 
-class Logo extends Component {
-  state = {
-    logoNumber: 0,
-  };
+const Logo = () => {
+  const [logoNumber, setLogoNumber] = useState(0);
 
-  componentDidMount() {
-    this.animateIcon();
-  }
+  useInterval(() => {
+    const newLogoNumber =
+      logoNumber === logoPaths.length - 1 ? 0 : logoNumber + 1;
 
-  animateIcon = () => {
-    setInterval(() => {
-      this.setState(({ logoNumber }) => ({
-        logoNumber: logoNumber === logoPaths.length - 1 ? 0 : logoNumber + 1,
-      }));
-    }, 400);
-  };
+    setLogoNumber(newLogoNumber);
+  }, 400);
 
-  renderLogo = () => logoPaths[this.state.logoNumber];
-  // renderLogo = () => logoPaths[0];
-
-  render() {
-    return this.renderLogo();
-  }
-}
+  return logoPaths[logoNumber];
+};
 
 export default Logo;
