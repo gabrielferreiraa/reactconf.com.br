@@ -1,19 +1,23 @@
 import React, { PureComponent } from 'react';
+import styled from 'styled-components';
 import { css } from 'glamor';
+import Button from './Button';
 
 import Globals from '../utils/Globals';
 import Text from './Text';
 
 const styles = {
   container: css({
-    alignSelf: 'flex-end',
+    // alignSelf: "flex-end",
     background: '#FA46FF',
     width: '100vw',
     display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     color: Globals.colors.white,
-    '@media(max-width: 720px)': {
-      alignSelf: 'auto',
-    },
+    // "@media(max-width: 720px)": {
+    //   alignSelf: "auto"
+    // }
   }),
   link: css({
     color: Globals.colors.background,
@@ -46,6 +50,10 @@ const styles = {
   }),
 };
 
+const BuyTicket = styled(Button)`
+  margin: 20px;
+`;
+
 class TextBuyIngressos extends PureComponent {
   render() {
     return (
@@ -53,17 +61,10 @@ class TextBuyIngressos extends PureComponent {
         <Text
           title={Globals.date.full}
           subtitle={`${Globals.date.weekDay}, das ${Globals.date.hour}`}
-        >
-          <br />
-          <a
-            href={Globals.buyTicketLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            {...styles.link}
-          >
-            Ingressos aqui
-          </a>
-        </Text>
+        />
+        <BuyTicket href={Globals.buyTicketLink} light medium>
+          Ingressos aqui
+        </BuyTicket>
       </div>
     );
   }

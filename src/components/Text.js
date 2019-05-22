@@ -7,8 +7,8 @@ const styles = {
   container: css({
     width: '100%',
     fontWeight: 'lighter',
-    maxWidth: 1000,
-    margin: '2em auto',
+    // maxWidth: 1000,
+    margin: '0 auto',
     textAlign: 'center',
     color: Globals.colors.primary,
 

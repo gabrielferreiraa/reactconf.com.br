@@ -49,7 +49,7 @@ const lightStyle = `
 `;
 
 const StyledButton = styled.a`
-  padding: 10px 30px;
+  padding: 10px ${props => (!!props.medium ? '70px' : '30px')};
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
