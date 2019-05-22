@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useInterval from 'react-useinterval';
+import useInterval from '@use-it/interval';
 
 import logoPaths from '../../utils/logoPaths';
 

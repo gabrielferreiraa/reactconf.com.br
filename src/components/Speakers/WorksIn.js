@@ -19,7 +19,7 @@ const WorksIn = ({ name, link }) =>
   <StyledWorksIn>
     {!!name &&
       <Link
-        href={!!link ? link : 'javascript:void(0)'}
+        href={!!link ? link : ''}
         rel="noopener noreferrer"
         target="_blank"
         className="notranslate"

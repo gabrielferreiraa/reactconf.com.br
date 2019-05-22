@@ -1197,6 +1197,10 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
+"@use-it/interval@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-0.1.3.tgz#5d1096b2295d7a5dda8e8022f3abb5f9d9ef27f8"
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -8203,10 +8207,6 @@ react-transition-group@^2.2.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
-
-react-useinterval@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-useinterval/-/react-useinterval-1.0.1.tgz#4bb90349d18b0fc04d6567edacf476d515b5cf49"
 
 react-video-cover@^1.1.0:
   version "1.1.0"

@@ -46,7 +46,7 @@ const Button = ({ children, ...props }) =>
 Button.defaultProps = {
   disabled: false,
   target: '_blank',
-  href: 'javascript:void(0)',
+  href: '',
 };
 
 Button.propTypes = {

@@ -40,13 +40,22 @@ const Contact = () =>
         <i lang="en" className="notranslate">
           Pull Request
         </i>. Ajude a manter esta página:<br />
-        <a {...styles.link} target="_blank" href={Globals.contacts.repo}>
+        <a
+          {...styles.link}
+          target="_blank"
+          href={Globals.contacts.repo}
+          rel="noopener noreferrer"
+        >
           {Globals.contacts.repo}
         </a>
       </p>
       <p>
         E-mail:<br />
-        <a {...styles.link} href={`mailto:${Globals.contacts.email}`}>
+        <a
+          {...styles.link}
+          href={`mailto:${Globals.contacts.email}`}
+          rel="noopener noreferrer"
+        >
           {Globals.contacts.email}
         </a>
       </p>
