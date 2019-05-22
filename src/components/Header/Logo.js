@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import logoPaths from '../utils/logoPaths';
+import logoPaths from '../../utils/logoPaths';
 
 class Logo extends Component {
   state = {

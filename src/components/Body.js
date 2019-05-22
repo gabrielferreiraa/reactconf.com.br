@@ -35,13 +35,13 @@ const App = () =>
     {/* <Park /> */}
     <Speakers />
     {/* <Schedule /> */}
-    <TextSponsor />
-    <BeSponsor />
+    <BuyIngressos />
     {/* <Supporters /> */}
     {/* <Promotions /> */}
     {/* <AfterParty />*/}
+    <TextSponsor />
+    <BeSponsor />
     <Meetup />
-    <BuyIngressos />
     <C4P />
     <Contact />
   </div>;

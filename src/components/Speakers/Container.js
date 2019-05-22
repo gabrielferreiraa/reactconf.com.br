@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Globals from '../../utils/Globals';
 
 const StyledContainer = styled.div`
-  background: #fff;
+  background: ${Globals.colors.white};
   width: 100vw;
   align-items: center;
 

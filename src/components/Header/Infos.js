@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { css } from 'glamor';
 
-import Globals from '../utils/Globals';
+import Globals from '../../utils/Globals';
 
 const styles = {
   container: css({

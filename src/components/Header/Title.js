@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'glamor';
 
-import Globals from '../utils/Globals';
+import Globals from '../../utils/Globals';
 
 const styles = {
   header: css({
