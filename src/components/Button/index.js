@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Globals from '../../utils/Globals';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Globals from "../../utils/Globals";
 
 const { colors } = Globals;
 
@@ -49,7 +49,7 @@ const lightStyle = `
 `;
 
 const StyledButton = styled.a`
-  padding: 10px ${props => (props.medium ? '70px' : '30px')};
+  padding: 10px ${props => (props.medium ? "70px" : "30px")};
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
@@ -80,8 +80,8 @@ Button.defaultProps = {
   disabled: false,
   reverse: false,
   light: false,
-  target: '_blank',
-  href: '',
+  target: "_blank",
+  href: ""
 };
 
 Button.propTypes = {
@@ -90,7 +90,7 @@ Button.propTypes = {
   target: PropTypes.string,
   disabled: PropTypes.bool,
   reverse: PropTypes.bool,
-  light: PropTypes.bool,
+  light: PropTypes.bool
 };
 
 export default Button;
