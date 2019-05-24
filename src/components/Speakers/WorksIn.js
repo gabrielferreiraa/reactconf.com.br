@@ -15,18 +15,20 @@ const Link = styled.a`
   font-weight: bold;
 `;
 
-const WorksIn = ({ name, link }) =>
+const WorksIn = ({ name, link }) => (
   <StyledWorksIn>
-    {!!name &&
+    {!!name && (
       <Link
-        href={!!link ? link : ''}
+        href={link || ''}
         rel="noopener noreferrer"
         target="_blank"
         className="notranslate"
       >
         @{name}
-      </Link>}
-  </StyledWorksIn>;
+      </Link>
+    )}
+  </StyledWorksIn>
+);
 
 WorksIn.defaultProps = {
   name: '',

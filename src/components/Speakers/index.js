@@ -13,7 +13,7 @@ const Speakers = () => {
   const [isOpen, setOpen] = useState(false);
 
   const handleSpeakerClick = speaker => {
-    if (!!speaker.videoId) {
+    if (speaker.videoId) {
       setVideo(speaker.videoId);
       setOpen(true);
     }
@@ -23,13 +23,13 @@ const Speakers = () => {
     <Container>
       <Text title="Palestrantes" reverse />
       <Cards>
-        {speakers.map(speaker =>
+        {speakers.map(speaker => (
           <Speaker
             key={speaker.id}
             speaker={speaker}
             handleSpeakerClick={() => handleSpeakerClick(speaker)}
-          />,
-        )}
+          />
+        ))}
       </Cards>
 
       <ModalVideo

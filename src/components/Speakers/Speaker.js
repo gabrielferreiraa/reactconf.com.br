@@ -16,13 +16,14 @@ const StyledSpeaker = styled.div`
   margin: 10px 10px 4em;
 `;
 
-const Speaker = ({ speaker, handleSpeakerClick }) =>
+const Speaker = ({ speaker, handleSpeakerClick }) => (
   <StyledSpeaker>
     <Avatar speaker={speaker} handleSpeakerClick={handleSpeakerClick} />
     <Name name={speaker.name} github={speaker.github} />
     <WorksIn name={speaker.worksIn} link={speaker.worksLink} />
-    <Theme theme={speaker.theme} talk={!!speaker.talk ? speaker.talk : ''} />
-  </StyledSpeaker>;
+    <Theme theme={speaker.theme} talk={speaker.talk ? speaker.talk : ''} />
+  </StyledSpeaker>
+);
 
 Speaker.propTypes = {
   speaker: PropTypes.object.isRequired,

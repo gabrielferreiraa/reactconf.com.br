@@ -7,6 +7,7 @@ const StyledContainer = styled.div`
   background: ${Globals.colors.white};
   width: 100vw;
   align-items: center;
+  padding-top: 20px;
 
   @media (max-width: 720px) {
     align-self: auto;

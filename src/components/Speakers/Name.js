@@ -21,7 +21,7 @@ const Link = styled.a`
   color: #222;
 `;
 
-const Name = ({ name, github }) =>
+const Name = ({ name, github }) => (
   <StyledName>
     <Link
       href={github}
@@ -31,7 +31,8 @@ const Name = ({ name, github }) =>
     >
       {name}
     </Link>
-  </StyledName>;
+  </StyledName>
+);
 
 Name.propTypes = {
   name: PropTypes.string.isRequired,

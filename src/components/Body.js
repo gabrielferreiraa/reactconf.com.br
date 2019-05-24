@@ -8,7 +8,7 @@ import Park from './Park';
 import Speakers from './Speakers';
 import Schedule from './Schedule';
 import C4P from './C4P';
-import TextSponsor from './Sponsor';
+import Sponsors from './Sponsors';
 import Supporters from './Supporters';
 import Promotions from './Promotions';
 import BuyIngressos from './BuyIngressos';
@@ -28,7 +28,7 @@ const styles = {
   }),
 };
 
-const App = () =>
+const App = () => (
   <div {...styles.container}>
     <Event />
     <Venue />
@@ -39,11 +39,12 @@ const App = () =>
     {/* <Supporters /> */}
     {/* <Promotions /> */}
     {/* <AfterParty />*/}
-    <TextSponsor />
+    <Sponsors />
     <BeSponsor />
     <Meetup />
     <C4P />
     <Contact />
-  </div>;
+  </div>
+);
 
 export default App;

@@ -3,4 +3,9 @@ import plenos from './plenos';
 import juniors from './juniors';
 import padawans from './padawans';
 
-export { seniors, plenos, juniors, padawans };
+export default {
+  seniors,
+  plenos,
+  juniors,
+  padawans,
+};

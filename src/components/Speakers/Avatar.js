@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Webcam from 'react-webcam';
+
 import Globals from '../../utils/Globals';
 import ytIcon from '../../media/icons/ytIcon.png';
-import Webcam from 'react-webcam';
 
 const StyledAvatar = styled.a`
   background-image: url(${({ speaker }) => speaker.avatar});
@@ -35,14 +37,23 @@ const YoutubeIcon = styled.img`
 `;
 
 const StyledWebcam = styled(Webcam)`
-    height: 230px;
-    border-radius: 50%;
+  height: 230px;
+  border-radius: 50%;
 `;
 
-const Avatar = ({ speaker, handleSpeakerClick }) =>
+const Avatar = ({ speaker, handleSpeakerClick }) => (
   <StyledAvatar speaker={speaker} onClick={handleSpeakerClick}>
     {!!speaker.isYou && <StyledWebcam audio={false} />}
     {!!speaker.videoId && <YoutubeIcon alt="youtube" src={ytIcon} />}
-  </StyledAvatar>;
+  </StyledAvatar>
+);
+
+Avatar.propTypes = {
+  speaker: PropTypes.shape({
+    isYou: PropTypes.bool,
+    videoId: PropTypes.string,
+  }).isRequired,
+  handleSpeakerClick: PropTypes.func.isRequired,
+};
 
 export default Avatar;

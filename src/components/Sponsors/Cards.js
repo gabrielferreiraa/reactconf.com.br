@@ -8,8 +8,7 @@ const StyledCards = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
-  margin: 0 auto;
-  max-width: 1000px;
+  margin: 30px auto;
 `;
 
 const Cards = ({ children }) => <StyledCards>{children}</StyledCards>;

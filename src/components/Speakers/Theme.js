@@ -25,14 +25,11 @@ const Link = styled.a`
   }
 `;
 
-const Theme = ({ theme, talk }) =>
+const Theme = ({ theme, talk }) => (
   <StyledTheme className="notranslate">
-    {!!talk
-      ? <Link href={talk}>
-          {theme}
-        </Link>
-      : theme}
-  </StyledTheme>;
+    {talk ? <Link href={talk}>{theme}</Link> : theme}
+  </StyledTheme>
+);
 
 Theme.defaultProps = {
   talk: '',
