@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Globals from '../../utils/Globals';
 import styled from 'styled-components';
+import Globals from '../../utils/Globals';
 
 const { colors } = Globals;
 
@@ -16,7 +16,7 @@ const defaultStyle = `
   color: ${colors.primary};
   background: ${colors.secondary};
   border: 2px solid ${colors.transparent};
-  
+
   &:hover {
     background-color: ${colors.transparent};
     color: ${colors.secondary};
@@ -49,7 +49,7 @@ const lightStyle = `
 `;
 
 const StyledButton = styled.a`
-  padding: 10px ${props => (!!props.medium ? '70px' : '30px')};
+  padding: 10px ${props => (props.medium ? '70px' : '30px')};
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
@@ -62,26 +62,19 @@ const StyledButton = styled.a`
   }
 
   ${props => {
-    if (props.disabled) {
-      return disabledStyle;
-    }
-
-    if (props.reverse) {
-      return reverseStyle;
-    }
-
-    if (props.light) {
-      return lightStyle;
-    }
+    if (props.disabled) return disabledStyle;
+    if (props.reverse) return reverseStyle;
+    if (props.light) return lightStyle;
 
     return defaultStyle;
   }};
 `;
 
-const Button = ({ children, ...props }) =>
+const Button = ({ children, ...props }) => (
   <StyledButton {...props} rel="noopener noreferrer">
     {children}
-  </StyledButton>;
+  </StyledButton>
+);
 
 Button.defaultProps = {
   disabled: false,

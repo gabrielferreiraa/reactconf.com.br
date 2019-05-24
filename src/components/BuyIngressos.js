@@ -51,7 +51,7 @@ const styles = {
 };
 
 const BuyTicket = styled(Button)`
-  margin: 20px;
+  margin: 20px 0 40px;
 `;
 
 class TextBuyIngressos extends PureComponent {

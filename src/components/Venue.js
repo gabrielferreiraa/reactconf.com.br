@@ -1,65 +1,31 @@
-import React, { PureComponent } from 'react';
-import styled from 'styled-components';
-import { css } from 'glamor';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 import Globals from '../utils/Globals';
-import imgTheater from '../media/images/teatro_apcd.jpeg';
+import theater from '../media/images/theater_apcd2.jpg';
 import Text from './Text';
 
 import Button from './Button';
 
-const styles = {
-  container: css({
-    alignSelf: 'flex-end',
-    color: Globals.colors.white,
-    background: Globals.colors.secondary,
-    width: '100vw',
-    display: 'flex',
-    '> img': {
-      maxWidth: '100%',
-    },
-    '@media(max-width: 720px)': {
-      alignSelf: 'auto',
-    },
-  }),
-  small: css({
-    display: 'block',
-  }),
-  evnts: css({
-    margin: '0 auto 20px auto',
-  }),
-};
+const move = keyframes`
+  from {
+    background-position: right;
+  }
 
-// class TextVenue extends PureComponent {
-//   render() {
-//     return (
-//       <div {...styles.container}>
-//         <Text
-//           title="Local"
-//           subtitle={`${Globals.location.locale}, ${Globals.location.city}`}
-//         >
-//           <img
-//             src={imgTheater}
-//             alt={Globals.location.locale}
-//             title={Globals.location.locale}
-//           />
-//           <small {...styles.small}>Foto: Divulgação</small>
-// <Button href={Globals.contacts.maps} light>
-//   {Globals.location.address}, São Paulo - SP
-// </Button>
-//         </Text>
-//       </div>
-//     );
-//   }
-// }
+  to {
+    background-position: left;
+  }
+`;
 
 const Wrapper = styled.div`
   display: block;
   width: 100%;
   position: relative;
   height: 400px;
-  background: url(http://www.apcd.org.br/assets/uploaded/produtos/973262201ab2573b28d8bb0c172fb213.jpg)
-    fixed no-repeat center 50% / cover;
+  background: url(${theater}) fixed no-repeat;
+  background-size: cover;
+  animation: ${move} 15s linear infinite alternate;
+  will-change: background-position;
 
   &:after {
     content: '';
@@ -85,7 +51,7 @@ const Locale = styled.div`
   justify-content: center;
 `;
 
-const TextVenue = () =>
+const TextVenue = () => (
   <Wrapper>
     <Locale>
       <Text
@@ -96,6 +62,7 @@ const TextVenue = () =>
         {Globals.location.address}, São Paulo - SP
       </Button>
     </Locale>
-  </Wrapper>;
+  </Wrapper>
+);
 
 export default TextVenue;

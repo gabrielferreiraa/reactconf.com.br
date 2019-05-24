@@ -14,25 +14,24 @@ const TypeSection = styled.div`
   flex-wrap: wrap;
 `;
 
-const sponsorCard = type => {
-  if (sponsors[type].length) {
-    return (
-      <TypeSection>
-        {sponsors[type].map(sponsor => (
-          <Card key={type} sponsor={sponsor} type={type} />
-        ))}
-      </TypeSection>
-    );
-  }
-
-  return false;
-};
+const SponsorCard = ({ type }) =>
+  !!sponsors[type].length && (
+    <TypeSection>
+      {sponsors[type].map(sponsor => (
+        <Card key={`sponsor-${sponsor.id}`} sponsor={sponsor} type={type} />
+      ))}
+    </TypeSection>
+  );
 
 const Sponsors = () => (
   <Container>
     <Text title="Patrocínio" />
 
-    <Cards>{Object.keys(sponsors).map(type => sponsorCard(type))}</Cards>
+    <Cards>
+      {Object.keys(sponsors).map(type => (
+        <SponsorCard key={`card-${type}`} type={type} />
+      ))}
+    </Cards>
   </Container>
 );
 
