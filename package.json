@@ -34,12 +34,6 @@
     "react-scripts": "3.0.1"
   },
   "homepage": "https://reactconf.com.br/",
-  "lint-staged": {
-    "*.js": [
-      "prettier --write --single-quote true --trailing-comma all --print-width 80",
-      "git add"
-    ]
-  },
   "private": false,
   "scripts": {
     "build": "react-scripts build",
