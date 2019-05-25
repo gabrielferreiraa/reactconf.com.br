@@ -55,6 +55,9 @@ export default {
     text: 'Votação no GitHub propondo assuntos:',
   },
 
+  /**
+   * Informações de contato
+   */
   contacts: {
     slack: 'https://react.now.sh',
     twitter: 'http://twitter.com/reactconfbr',
@@ -69,5 +72,20 @@ export default {
   utm:
     '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2019',
 
+  /**
+   * Link para compra do ingresso
+   */
   buyTicketLink: 'https://www.ingresse.com/reactconfbr',
+
+  /**
+   * Dados do estacionamento
+   */
+  // park: {
+  //   name: 'PantaPark',
+  //   price: 'R$15,00',
+  //   hour: '6:30h às 23:00h',
+  //   phone: '(11) 3105-6492',
+  //   fullAddress: 'Av. Brigadeiro Luis Antônio, 759 - 1º subsolo, Bela Vista',
+  //   googleMapsLink: 'https://goo.gl/maps/pbkK6tW4UbJ2',
+  // },
 };

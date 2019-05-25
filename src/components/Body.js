@@ -4,7 +4,7 @@ import Globals from '../utils/Globals';
 
 import Event from './Event';
 import Venue from './Venue';
-// import Park from './Park';
+import Park from './Park';
 import Speakers from './Speakers';
 // import Schedule from './Schedule';
 import C4P from './C4P';
@@ -30,9 +30,9 @@ const App = () => (
   <Container>
     <Event />
     <Venue />
-    {/* <Park /> */}
     <Speakers />
     {/* <Schedule /> */}
+    <Park />
     <BuyTickets />
     {/* <Supporters /> */}
     {/* <Promotions /> */}
