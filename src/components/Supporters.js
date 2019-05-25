@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { css } from 'glamor';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import Text from './Text';
 
@@ -14,7 +14,7 @@ import tailImg from '../media/images/sponsors/tailLogo.svg';
 
 const styles = {
   container: css({
-    background: Globals.colors.white,
+    background: globals.colors.white,
     width: '100vw',
     alignItems: 'center',
     '@media(max-width: 720px)': {
@@ -34,7 +34,7 @@ const styles = {
       height: 150,
     },
     padding: '0',
-    backgroundColor: Globals.colors.white,
+    backgroundColor: globals.colors.white,
     borderRadius: 0,
     margin: 10,
     position: 'relative',
@@ -117,49 +117,44 @@ class TextSupporters extends PureComponent {
         <Text title="Apoio" reverse />
 
         <div {...styles.cards}>
-          {Supporters.map(sponsor => {
-            return (
-              <div key={sponsor.id} {...styles.card}>
+          {Supporters.map(sponsor => (
+            <div key={sponsor.id} {...styles.card}>
+              <a
+                href={`${
+                  sponsor.link
+                }?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017`}
+                title={sponsor.name}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={sponsor.avatar} alt={sponsor.name} />
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {SecondarySupporters && (
+          <div {...styles.cards}>
+            {SecondarySupporters.map(secondarySponsor => (
+              <div key={secondarySponsor.id} {...styles.card}>
                 <a
-                  href={
-                    sponsor.link +
-                    '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                  }
-                  title={sponsor.name}
+                  href={`${
+                    secondarySponsor.link
+                  }?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017`}
+                  title={secondarySponsor.name}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <img src={sponsor.avatar} alt={sponsor.name} />
+                  <img
+                    src={secondarySponsor.avatar}
+                    alt={secondarySponsor.name}
+                    className="secondary"
+                  />
                 </a>
               </div>
-            );
-          })}
-        </div>
-
-        {SecondarySupporters &&
-          <div {...styles.cards}>
-            {SecondarySupporters.map(secondarySponsor => {
-              return (
-                <div key={secondarySponsor.id} {...styles.card}>
-                  <a
-                    href={
-                      secondarySponsor.link +
-                      '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                    }
-                    title={secondarySponsor.name}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src={secondarySponsor.avatar}
-                      alt={secondarySponsor.name}
-                      className="secondary"
-                    />
-                  </a>
-                </div>
-              );
-            })}
-          </div>}
+            ))}
+          </div>
+        )}
       </div>
     );
   }

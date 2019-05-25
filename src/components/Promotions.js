@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { css } from 'glamor';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import Text from './Text';
 
@@ -10,7 +10,7 @@ import infoqImg from '../media/images/sponsors/infoqbrasil.png';
 
 const styles = {
   container: css({
-    background: Globals.colors.white,
+    background: globals.colors.white,
     width: '100vw',
     alignItems: 'center',
     '@media(max-width: 720px)': {
@@ -27,7 +27,7 @@ const styles = {
       height: 150,
     },
     padding: '0',
-    backgroundColor: Globals.colors.white,
+    backgroundColor: globals.colors.white,
     borderRadius: 0,
     margin: 10,
     position: 'relative',
@@ -79,23 +79,20 @@ class TextPromotions extends PureComponent {
       <div {...styles.container}>
         <Text title="Promoção" reverse />
         <div {...styles.cards}>
-          {Promotions.map(promotion => {
-            return (
-              <div key={promotion.id} {...styles.card}>
-                <a
-                  href={
-                    promotion.link +
-                    '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                  }
-                  title={promotion.name}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img src={promotion.avatar} alt={promotion.name} />
-                </a>
-              </div>
-            );
-          })}
+          {Promotions.map(promotion => (
+            <div key={promotion.id} {...styles.card}>
+              <a
+                href={`${
+                  promotion.link
+                }?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017`}
+                title={promotion.name}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={promotion.avatar} alt={promotion.name} />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     );
