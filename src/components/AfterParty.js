@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { css } from 'glamor';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import Text from './Text';
 
@@ -8,7 +8,7 @@ import englishthingImg from '../media/images/sponsors/englishthing.png';
 
 const styles = {
   container: css({
-    background: Globals.colors.white,
+    background: globals.colors.white,
     width: '100vw',
     alignItems: 'center',
     '@media(max-width: 720px)': {
@@ -16,13 +16,13 @@ const styles = {
     },
   }),
   sponsorbtn: css({
-    color: Globals.colors.background,
+    color: globals.colors.background,
     fontSize: 20,
     textAlign: 'center',
     maxWidth: 200,
     borderRadius: 20,
     padding: '10px 20px',
-    backgroundColor: Globals.colors.main,
+    backgroundColor: globals.colors.main,
     display: 'block',
     margin: '4em auto',
     textDecoration: 'none',
@@ -43,7 +43,7 @@ const styles = {
       height: 100,
     },
     padding: '0',
-    backgroundColor: Globals.colors.white,
+    backgroundColor: globals.colors.white,
     borderRadius: 0,
     margin: 10,
     '> a > img': {
@@ -79,23 +79,20 @@ class TextAfterParty extends PureComponent {
       <div {...styles.container}>
         <Text title="AfterParty por" reverse />
         <div {...styles.cards}>
-          {AfterParty.map(promotion => {
-            return (
-              <div key={promotion.id} {...styles.card}>
-                <a
-                  href={
-                    promotion.link +
-                    '?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017'
-                  }
-                  title={promotion.name}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img src={promotion.avatar} alt={promotion.name} />
-                </a>
-              </div>
-            );
-          })}
+          {AfterParty.map(promotion => (
+            <div key={promotion.id} {...styles.card}>
+              <a
+                href={`${
+                  promotion.link
+                }?utm_source=reactconfbr-site&utm_medium=logo&utm_campaign=reactconfbr-2017`}
+                title={promotion.name}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src={promotion.avatar} alt={promotion.name} />
+              </a>
+            </div>
+          ))}
         </div>
         <p {...styles.paragraphAfterParty}>
           <b>Mono Club, Rua Augusta, 480</b>
@@ -103,16 +100,6 @@ class TextAfterParty extends PureComponent {
         <p {...styles.paragraphAfterParty}>
           Festa fechada com DJ e Open Bar exclusivo para os participantes da
           React Conf Brasil após o evento.
-        </p>
-        <p>
-          <a
-            {...styles.sponsorbtn}
-            href="mailto:reactconfbr@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Seja um patrocinador
-          </a>
         </p>
       </div>
     );

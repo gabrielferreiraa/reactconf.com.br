@@ -1,70 +1,70 @@
-import React, { PureComponent } from 'react';
-import { css } from 'glamor';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
-import Globals from '../utils/Globals';
-import imgTheater from '../media/images/teatro_apcd.jpeg';
-import Text from './Text';
+import globals from '../utils/globals';
+import theater from '../media/images/theater_apcd.jpg';
+import { Title, SubTitle } from './Title';
 
-const styles = {
-  container: css({
-    alignSelf: 'flex-end',
-    color: Globals.colors.white,
-    background: '#B281FF',
-    width: '100vw',
-    display: 'flex',
-    '> img': {
-      maxWidth: '100%',
-    },
-    '@media(max-width: 720px)': {
-      alignSelf: 'auto',
-    },
-  }),
-  small: css({
-    display: 'block',
-  }),
-  mediumBtn: css({
-    color: '#B281FF',
-    fontSize: 16,
-    textAlign: 'center',
-    maxWidth: 360,
-    borderRadius: 4,
-    padding: '10px 20px',
-    backgroundColor: Globals.colors.white,
-    display: 'block',
-    margin: '0 auto',
-    textDecoration: 'none',
-  }),
-  evnts: css({
-    margin: '0 auto 20px auto',
-  }),
-};
+import Button from './Button';
 
-class TextVenue extends PureComponent {
-  render() {
-    return (
-      <div {...styles.container}>
-        <Text title="Local" subtitle="Teatro APCD, São Paulo, Brasil">
-          {/* <p>
-            Uma das mais tradicionais casas de espetáculo de São Paulo será
-            palco da 3ª React Conf Brasil
-          </p> */}
-          <img src={imgTheater} alt="Teatro APCD" title="Teatro APCD" />
-          <small {...styles.small}>Foto: Divulgação</small>
-          <p>Rua Voluntários da Pátria, 547 - Santana, São Paulo - SP</p>
-          <p>
-            <a
-              {...styles.mediumBtn}
-              href="https://goo.gl/maps/GBi9o1mJB23UAheN8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Google Maps
-            </a>
-          </p>
-        </Text>
-      </div>
-    );
+const move = keyframes`
+  from {
+    background-position: right;
   }
-}
+
+  to {
+    background-position: left;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 400px;
+  background: url(${theater}) fixed no-repeat;
+  background-size: cover;
+  animation: ${move} 15s linear infinite alternate;
+  will-change: background-position;
+
+  &:after {
+    content: "";
+    background: linear-gradient(
+      rgba(20, 167, 248, 0.35),
+      rgba(5, 47, 70, 0.91)
+    );
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+`;
+
+const Locale = styled.div`
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+`;
+
+const TextVenue = () => (
+  <Wrapper>
+    <Locale>
+      <Title title="Local" light />
+      <SubTitle
+        title={`${globals.location.locale}, ${globals.location.city}`}
+        light
+      />
+
+      <Button href={globals.contacts.maps} light>
+        {`${globals.location.address}, São Paulo - SP`}
+      </Button>
+    </Locale>
+  </Wrapper>
+);
 
 export default TextVenue;

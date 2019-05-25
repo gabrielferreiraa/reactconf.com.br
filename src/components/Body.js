@@ -1,54 +1,48 @@
-import React, { PureComponent } from 'react';
-import { css } from 'glamor';
-import Globals from '../utils/Globals';
+import React from 'react';
+import styled from 'styled-components';
+import globals from '../utils/globals';
 
 import Event from './Event';
 import Venue from './Venue';
 import Park from './Park';
 import Speakers from './Speakers';
 import Schedule from './Schedule';
-import TextSC4P from './C4P';
-import TextSponsor from './Sponsor';
-import Supporters from './Supporters';
-import Promotions from './Promotions';
-import BuyIngressos from './BuyIngressos';
+import C4P from './C4P';
+import Sponsors from './Sponsors';
+// import Supporters from './Supporters';
+// import Promotions from './Promotions';
+import BuyTickets from './BuyTickets';
 import Contact from './Contact';
-import Meetup from './Meetup';
-//import AfterParty from './AfterParty';
+import Meetups from './Meetups';
+// import AfterParty from './AfterParty';
 import BeSponsor from './BeSponsor';
 
-const styles = {
-  container: css({
-    display: 'flex',
-    background: Globals.colors.background,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    width: '100%',
-  }),
-};
+const Container = styled.div`
+  display: flex;
+  background: ${globals.colors.white};
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+`;
 
-class App extends PureComponent {
-  render() {
-    return (
-      <div {...styles.container}>
-        <Event />
-        <Venue />
-        {/* <Park /> */}
-        {/* <Speakers /> */}
-        {/* <Schedule /> */}
-        <TextSC4P />
-        <TextSponsor />
-        <BeSponsor />
-        {/* <Supporters /> */}
-        {/* <Promotions /> */}
-        {/* <AfterParty />*/}
-        <Meetup />
-        <BuyIngressos />
-        <Contact />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Container>
+    <Event />
+    <Venue />
+    <Speakers />
+    <Schedule />
+    <Park />
+    <BuyTickets />
+    {/* <Supporters />
+    <Promotions />
+    <AfterParty /> */}
+    <Sponsors />
+    <BeSponsor />
+    <Meetups />
+    <C4P />
+    <Contact />
+  </Container>
+);
 
 export default App;

@@ -1,15 +1,18 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'glamor';
 
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 const styles = {
   container: css({
     width: '100%',
     fontWeight: 'lighter',
-    maxWidth: 1000,
-    margin: '2em auto',
+    // maxWidth: 1000,
+    margin: '0 auto',
     textAlign: 'center',
+    color: globals.colors.primary,
+
     '> h1': {
       fontSize: '3.998em',
       margin: '1em',
@@ -24,13 +27,13 @@ const styles = {
       margin: '1em',
     },
     '> h4': {
-      color: Globals.colors.topic,
+      color: globals.colors.topic,
       margin: '1em',
       fontWeight: 'lighter',
       fontSize: '1.414em',
     },
     '> h5': {
-      color: Globals.colors.topic,
+      color: globals.colors.topic,
       margin: '1em',
       fontWeight: 'lighter',
       fontSize: '1em',
@@ -40,14 +43,14 @@ const styles = {
       fontSize: '1em',
     },
     '> span': {
-      color: Globals.colors.darken,
+      color: globals.colors.darken,
       display: 'inline-block',
       margin: '1em',
       fontSize: '1em',
     },
     '> p span': {
       fontSize: '1em',
-      color: Globals.colors.primary,
+      color: globals.colors.primary,
       display: 'inline-block',
       margin: '1em',
     },
@@ -63,16 +66,23 @@ class Text extends PureComponent {
 
     return (
       <div {...styles.container}>
-        <h2>
-          {title}
-        </h2>
-        <h3>
-          {subtitle}
-        </h3>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
         {children}
       </div>
     );
   }
 }
+
+Text.defaultProps = {
+  title: '',
+  subtitle: '',
+};
+
+Text.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
 
 export default Text;
