@@ -6,12 +6,13 @@ import TicketButton from './TicketButton';
 import Title from './Title';
 import Infos from './Infos';
 
-const Header = () =>
+const Header = () => (
   <Container>
     <Title />
     <TicketButton />
     <Logo />
     <Infos />
-  </Container>;
+  </Container>
+);
 
 export default Header;

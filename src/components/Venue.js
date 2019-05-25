@@ -1,11 +1,11 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
-import Globals from '../utils/Globals';
-import theater from '../media/images/theater_apcd2.jpg';
-import { Title, SubTitle } from './Title';
+import Globals from "../utils/Globals";
+import theater from "../media/images/theater_apcd.jpg";
+import { Title, SubTitle } from "./Title";
 
-import Button from './Button';
+import Button from "./Button";
 
 const move = keyframes`
   from {
@@ -61,8 +61,7 @@ const TextVenue = () => (
       />
 
       <Button href={Globals.contacts.maps} light>
-        {Globals.location.address}
-, São Paulo - SP
+        {Globals.location.address}, São Paulo - SP
       </Button>
     </Locale>
   </Wrapper>
