@@ -7,6 +7,7 @@ import { Title } from './Title';
 
 const Container = styled.div`
   background: ${Globals.colors.main};
+  width: 100%;
 `;
 
 const Buttons = styled.div`
@@ -16,6 +17,10 @@ const Buttons = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const MeetupButton = styled(Button)`
@@ -31,7 +36,7 @@ const Meetups = () => (
     <Title title="Meetups no Brasil" />
     <Buttons>
       {meetups.map(meetup => (
-        <MeetupButton href={meetup.link} light>
+        <MeetupButton key={meetup.name} href={meetup.link} light>
           {meetup.name}
         </MeetupButton>
       ))}

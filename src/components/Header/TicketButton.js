@@ -9,7 +9,7 @@ const TicketHere = styled(Button)`
   right: 35px;
   top: 35px;
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 480px) {
     position: relative;
     right: inherit;
     top: inherit;
@@ -17,7 +17,8 @@ const TicketHere = styled(Button)`
   }
 `;
 
-const TicketButton = () =>
-  <TicketHere href={Globals.buyTicketLink}>Ingressos aqui</TicketHere>;
+const TicketButton = () => (
+  <TicketHere href={Globals.buyTicketLink}>Ingressos aqui</TicketHere>
+);
 
 export default TicketButton;
