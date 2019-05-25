@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 import Globals from '../utils/Globals';
 import theater from '../media/images/theater_apcd2.jpg';
-import Text from './Text';
+import { Title, SubTitle } from './Title';
 
 import Button from './Button';
 
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   will-change: background-position;
 
   &:after {
-    content: '';
+    content: "";
     background: linear-gradient(
       rgba(20, 167, 248, 0.35),
       rgba(5, 47, 70, 0.91)
@@ -54,12 +54,15 @@ const Locale = styled.div`
 const TextVenue = () => (
   <Wrapper>
     <Locale>
-      <Text
-        title="Local"
-        subtitle={`${Globals.location.locale}, ${Globals.location.city}`}
+      <Title title="Local" light />
+      <SubTitle
+        title={`${Globals.location.locale}, ${Globals.location.city}`}
+        light
       />
+
       <Button href={Globals.contacts.maps} light>
-        {Globals.location.address}, São Paulo - SP
+        {Globals.location.address}
+, São Paulo - SP
       </Button>
     </Locale>
   </Wrapper>

@@ -4,17 +4,17 @@ import Globals from '../utils/Globals';
 
 import Event from './Event';
 import Venue from './Venue';
-import Park from './Park';
+// import Park from './Park';
 import Speakers from './Speakers';
-import Schedule from './Schedule';
+// import Schedule from './Schedule';
 import C4P from './C4P';
 import Sponsors from './Sponsors';
-import Supporters from './Supporters';
-import Promotions from './Promotions';
-import BuyIngressos from './BuyIngressos';
+// import Supporters from './Supporters';
+// import Promotions from './Promotions';
+import BuyTickets from './BuyTickets';
 import Contact from './Contact';
-import Meetup from './Meetup';
-//import AfterParty from './AfterParty';
+import Meetups from './Meetups';
+// import AfterParty from './AfterParty';
 import BeSponsor from './BeSponsor';
 
 const styles = {
@@ -35,13 +35,13 @@ const App = () => (
     {/* <Park /> */}
     <Speakers />
     {/* <Schedule /> */}
-    <BuyIngressos />
+    <BuyTickets />
     {/* <Supporters /> */}
     {/* <Promotions /> */}
-    {/* <AfterParty />*/}
+    {/* <AfterParty /> */}
     <Sponsors />
     <BeSponsor />
-    <Meetup />
+    <Meetups />
     <C4P />
     <Contact />
   </div>

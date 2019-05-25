@@ -51,6 +51,7 @@ const lightStyle = `
 const StyledButton = styled.a`
   padding: 10px ${props => (props.medium ? '70px' : '30px')};
   cursor: pointer;
+  text-align: center;
   font-weight: bold;
   text-decoration: none;
   font-size: 1em;
@@ -59,6 +60,10 @@ const StyledButton = styled.a`
 
   &:hover {
     transition: background-color 200ms ease;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.85em;
   }
 
   ${(props) => {

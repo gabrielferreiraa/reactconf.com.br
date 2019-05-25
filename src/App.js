@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${Globals.fonts.default};
     background: ${Globals.colors.transparent};
     overflow-x: hidden;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 `;
 
