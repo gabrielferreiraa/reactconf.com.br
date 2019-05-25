@@ -1,11 +1,11 @@
 import React from 'react';
+import Icon from './Icon';
 import Globals from '../../utils/Globals';
-import { hover } from 'glamor';
 
-const Twitter = ({ styles }) =>
-  <span>
+const Twitter = () => (
+  <Icon>
     <a
-      title="twitter"
+      title="Siga React Brasil no Twitter"
       href={Globals.contacts.twitter}
       rel="noopener noreferrer"
       target="_blank"
@@ -20,9 +20,7 @@ const Twitter = ({ styles }) =>
       >
         <g>
           <path
-            fill="gray"
-            {...styles.transition}
-            {...hover({ fill: Globals.colors.primary })}
+            fill={Globals.colors.primary}
             d="M97.523,18.526c-0.14-0.165-0.371-0.221-0.568-0.131c-2.919,1.295-5.99,2.226-9.153,2.776
             c3.358-2.526,5.86-6.024,7.143-10.035c0.062-0.192-0.002-0.402-0.159-0.527c-0.158-0.125-0.377-0.141-0.55-0.038
             c-3.782,2.243-7.878,3.824-12.18,4.701c-3.812-3.956-9.135-6.219-14.644-6.219c-11.204,0-20.318,9.114-20.318,20.317
@@ -38,6 +36,7 @@ const Twitter = ({ styles }) =>
         </g>
       </svg>
     </a>
-  </span>;
+  </Icon>
+);
 
 export default Twitter;

@@ -1,11 +1,11 @@
 import React from 'react';
+import Icon from './Icon';
 import Globals from '../../utils/Globals';
-import { hover } from 'glamor';
 
-const Slack = ({ styles }) =>
-  <span>
+const Slack = () => (
+  <Icon>
     <a
-      title="slack"
+      title="Entre no Slack do React Brasil"
       href={Globals.contacts.slack}
       target="_blank"
       rel="noopener noreferrer"
@@ -20,9 +20,7 @@ const Slack = ({ styles }) =>
       >
         <g>
           <path
-            fill="gray"
-            {...styles.transition}
-            {...hover({ fill: Globals.colors.primary })}
+            fill={Globals.colors.primary}
             d="M31.202,16.369c-0.62-1.388-2.249-2.011-3.637-1.391l-1.325,0.594l-3.396-7.591l1.325-0.592
                     c1.388-0.622,2.01-2.25,1.389-3.637c-0.62-1.389-2.248-2.012-3.637-1.39l-1.324,0.593l-0.593-1.326
                     c-0.621-1.388-2.249-2.009-3.637-1.388c-1.388,0.62-2.009,2.247-1.389,3.637l0.593,1.325L7.98,8.598L7.388,7.273
@@ -36,6 +34,7 @@ const Slack = ({ styles }) =>
         </g>
       </svg>
     </a>
-  </span>;
+  </Icon>
+);
 
 export default Slack;

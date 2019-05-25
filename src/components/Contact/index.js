@@ -1,7 +1,7 @@
 import React from 'react';
-import { css } from 'glamor';
+import styled from 'styled-components';
 
-import Text from '../Text';
+import { Title, SubTitle } from '../Title';
 import Globals from '../../utils/Globals';
 
 import Slack from './Slack';
@@ -9,57 +9,55 @@ import Github from './Github';
 import Facebook from './Facebook';
 import Twitter from './Twitter';
 
-const styles = {
-  container: css({
-    alignSelf: 'flex-end',
-    background: '#ffffff',
-    width: '100vw',
-    display: 'flex',
-    '@media(max-width: 720px)': {
-      alignSelf: 'auto',
-    },
-  }),
-  link: css({
-    color: Globals.colors.primary,
-  }),
-  transition: css({
-    transition: Globals.transitions.primary,
-  }),
-};
+const Container = styled.div`
+  background-color: ${Globals.colors.white};
+  width: 100%;
+  text-align: center;
+`;
 
-const Contact = () =>
-  <div {...styles.container}>
-    <Text title="Contato" subtitle="Acesse nossas redes">
-      <Slack styles={styles} />
-      <Twitter styles={styles} />
-      <Github styles={styles} />
-      <Facebook styles={styles} />
+const Link = styled.a`
+  color: ${Globals.colors.primary};
+`;
+
+const Contact = () => (
+  <Container>
+    <Title title="Contato" />
+    <SubTitle title="Acesse nossas redes" />
+
+    <div>
+      <Slack />
+      <Twitter />
+      <Github />
+      <Facebook />
 
       <p>
-        Envie sua{' '}
+        Envie sua
+        {' '}
         <i lang="en" className="notranslate">
           Pull Request
-        </i>. Ajude a manter esta página:<br />
-        <a
-          {...styles.link}
+        </i>
+        . Ajude a manter esta página:
+        <br />
+        <Link
           target="_blank"
           href={Globals.contacts.repo}
           rel="noopener noreferrer"
         >
           {Globals.contacts.repo}
-        </a>
+        </Link>
       </p>
       <p>
-        E-mail:<br />
-        <a
-          {...styles.link}
+        E-mail:
+        <br />
+        <Link
           href={`mailto:${Globals.contacts.email}`}
           rel="noopener noreferrer"
         >
           {Globals.contacts.email}
-        </a>
+        </Link>
       </p>
-    </Text>
-  </div>;
+    </div>
+  </Container>
+);
 
 export default Contact;
