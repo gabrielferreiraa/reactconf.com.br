@@ -3,6 +3,10 @@ export default {
     card: `
       width: calc((100% / 6) - 20px);
       height: 110px;
+
+      @media screen and (max-width: 768px) {
+        width: calc((100% / 3) - 20px);
+      }
     `,
     logo: `
       max-width: 110px;
@@ -13,6 +17,10 @@ export default {
     card: `
       width: calc((100% / 5) - 20px);
       height: 150px;
+
+      @media screen and (max-width: 768px) {
+        width: calc((100% / 3) - 20px);
+      }
     `,
     logo: `
       max-width: 150px;
@@ -23,6 +31,10 @@ export default {
     card: `
       width: calc((100% / 3) - 20px);
       height: 200px;
+
+      @media screen and (max-width: 768px) {
+        width: calc((100% / 2) - 20px);
+      }
     `,
     logo: `
       max-width: 200px;

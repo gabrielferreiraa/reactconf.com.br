@@ -14,6 +14,10 @@ const StyledCard = styled.div`
   justify-content: center;
 
   ${({ type }) => sizes[type].card};
+
+  @media screen and (max-width: 480px) {
+    width: calc(100% - 20px);
+  }
 `;
 
 const Logo = styled.img`

@@ -32,7 +32,6 @@ const reverseStyle = `
   &:hover {
     background-color: ${colors.secondary};
     color: ${colors.primary};
-    border: 2px solid ${colors.secondary};
   };
 `;
 
@@ -44,7 +43,17 @@ const lightStyle = `
   &:hover {
     background-color: ${colors.primary};
     color: ${colors.white};
-    border: 2px solid ${colors.transparent};
+  };
+`;
+
+const secondaryStyle = `
+  color: ${colors.white};
+  background: ${colors.main};
+  border: 2px solid ${colors.transparent};
+
+  &:hover {
+    background-color: ${colors.white};
+    color: ${colors.main};
   };
 `;
 
@@ -54,8 +63,18 @@ const StyledButton = styled.a`
   text-align: center;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1em;
-  border-radius: 22px;
+  font-size: ${(props) => {
+    if (props.medium) return '1.2em';
+    if (props.big) return '1.5em';
+
+    return '1em';
+  }};
+  border-radius: ${(props) => {
+    if (props.medium) return '24px';
+    if (props.big) return '27px';
+
+    return '22px';
+  }};
   transition: background-color 200ms ease;
 
   &:hover {
@@ -70,6 +89,7 @@ const StyledButton = styled.a`
     if (props.disabled) return disabledStyle;
     if (props.reverse) return reverseStyle;
     if (props.light) return lightStyle;
+    if (props.secondary) return secondaryStyle;
 
     return defaultStyle;
   }};

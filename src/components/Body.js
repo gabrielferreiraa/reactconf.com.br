@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'glamor';
+import styled from 'styled-components';
 import Globals from '../utils/Globals';
 
 import Event from './Event';
@@ -17,19 +17,17 @@ import Meetups from './Meetups';
 // import AfterParty from './AfterParty';
 import BeSponsor from './BeSponsor';
 
-const styles = {
-  container: css({
-    display: 'flex',
-    background: Globals.colors.background,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    width: '100%',
-  }),
-};
+const Container = styled.div`
+  display: flex;
+  background: ${Globals.colors.white};
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+`;
 
 const App = () => (
-  <div {...styles.container}>
+  <Container>
     <Event />
     <Venue />
     {/* <Park /> */}
@@ -44,7 +42,7 @@ const App = () => (
     <Meetups />
     <C4P />
     <Contact />
-  </div>
+  </Container>
 );
 
 export default App;

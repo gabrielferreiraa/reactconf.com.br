@@ -49,6 +49,7 @@ export default {
     subtitle:
       'React Native, GraphQL, Apollo, Jest, Reason, Docz, Redux, Relay, Flow, RxJS, Styled Components, Router, Navigation, Enzyme, Node, TypeScript, Deno, Webpack, Wasm, Prepack, Storybook, Reselect, Sagas, Thunk, Next, Logics, Immutable, React VR, MobX, Mocha, CSSModules, JSS, Actionz, Redux Form, Flux, Nightwatch, Mocha, Ramda, Glamorous, Reflux, Observable, Inferno, Lodash, Isomorphic, SSR, Babel, Leaflet',
   },
+
   topics: {
     title: 'O QUE QUEREMOS VER',
     text: 'Votação no GitHub propondo assuntos:',
