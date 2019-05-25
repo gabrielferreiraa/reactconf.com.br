@@ -7,8 +7,7 @@ const Logo = () => {
   const [logoNumber, setLogoNumber] = useState(0);
 
   useInterval(() => {
-    const newLogoNumber =
-      logoNumber === logoPaths.length - 1 ? 0 : logoNumber + 1;
+    const newLogoNumber = logoNumber === logoPaths.length - 1 ? 0 : logoNumber + 1;
 
     setLogoNumber(newLogoNumber);
   }, 400);

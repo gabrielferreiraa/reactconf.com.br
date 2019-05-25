@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Globals from '../utils/Globals';
-import meetups from '../utils/Meetups';
+import globals from '../utils/globals';
+import meetups from '../utils/data/meetups';
 import Button from './Button';
 import { Title } from './Title';
 
 const Container = styled.div`
-  background: ${Globals.colors.main};
+  background: ${globals.colors.main};
   width: 100%;
 `;
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 const StyledVideo = styled.iframe`
-  background: ${Globals.colors.transparent};
-  color: ${Globals.colors.primary};
+  background: ${globals.colors.transparent};
+  color: ${globals.colors.primary};
 `;
 
 const Video = props => (

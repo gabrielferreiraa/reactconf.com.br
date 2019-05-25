@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 import Button from './Button';
 
 const Container = styled.div`
-  background: ${Globals.colors.white};
+  background: ${globals.colors.white};
   width: 100%;
   height: 100px;
   display: flex;
@@ -12,11 +12,12 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const BeSponsor = () =>
+const BeSponsor = () => (
   <Container>
-    <Button href={`mailto:${Globals.contacts.email}`}>
+    <Button href={`mailto:${globals.contacts.email}`}>
       Seja um patrocinador
     </Button>
-  </Container>;
+  </Container>
+);
 
 export default BeSponsor;

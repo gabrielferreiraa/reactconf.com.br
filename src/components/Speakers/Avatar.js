@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Webcam from 'react-webcam';
 
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 import ytIcon from '../../media/icons/ytIcon.png';
 
 const StyledAvatar = styled.a`
@@ -18,7 +18,7 @@ const StyledAvatar = styled.a`
   align-items: center;
   justify-content: center;
   transition: filter 300ms ease;
-  border: 5px solid ${Globals.colors.primary};
+  border: 5px solid ${globals.colors.primary};
   cursor: pointer;
   overflow: hidden;
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import Event from './Event';
 import Venue from './Venue';
 import Park from './Park';
 import Speakers from './Speakers';
-// import Schedule from './Schedule';
+import Schedule from './Schedule';
 import C4P from './C4P';
 import Sponsors from './Sponsors';
 // import Supporters from './Supporters';
@@ -19,7 +19,7 @@ import BeSponsor from './BeSponsor';
 
 const Container = styled.div`
   display: flex;
-  background: ${Globals.colors.white};
+  background: ${globals.colors.white};
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -31,12 +31,12 @@ const App = () => (
     <Event />
     <Venue />
     <Speakers />
-    {/* <Schedule /> */}
+    <Schedule />
     <Park />
     <BuyTickets />
-    {/* <Supporters /> */}
-    {/* <Promotions /> */}
-    {/* <AfterParty /> */}
+    {/* <Supporters />
+    <Promotions />
+    <AfterParty /> */}
     <Sponsors />
     <BeSponsor />
     <Meetups />

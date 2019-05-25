@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const StyledContainer = styled.div`
-  background: ${Globals.colors.white};
+  background: ${globals.colors.white};
   width: 100vw;
   align-items: center;
 

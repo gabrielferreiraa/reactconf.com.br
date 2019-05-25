@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'glamor';
 
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const styles = {
   header: css({
@@ -12,7 +12,7 @@ const styles = {
     textAlign: 'left',
   }),
   title: css({
-    color: Globals.colors.white,
+    color: globals.colors.white,
     margin: 0,
     textTransform: 'uppercase',
     letterSpacing: 3,
@@ -21,14 +21,14 @@ const styles = {
     fontSize: ' 2.827em ',
   }),
   titleSpan: css({
-    color: Globals.colors.main,
+    color: globals.colors.main,
   }),
   hrContainer: css({
     width: 25,
     marginLeft: 30,
   }),
   hr: css({
-    borderColor: Globals.colors.primaryLight,
+    borderColor: globals.colors.primaryLight,
   }),
   subtitle: css({
     fontSize: ' 1.414em ',
@@ -38,8 +38,8 @@ const styles = {
     padding: '10px 15px 0 0',
     position: 'relative',
     top: '20px',
-    color: Globals.colors.main,
-    borderTop: `3px solid ${Globals.colors.main}`,
+    color: globals.colors.main,
+    borderTop: `3px solid ${globals.colors.main}`,
     fontWeight: 600,
   }),
   iconflagbr: css({
@@ -48,7 +48,7 @@ const styles = {
   }),
 };
 
-const Title = () =>
+const Title = () => (
   <div {...styles.header}>
     <h1 {...styles.title} className="notranslate">
       React
@@ -56,8 +56,9 @@ const Title = () =>
     </h1>
 
     <span {...styles.subtitle}>
-      {Globals.location.country} {Globals.date.year}
+      {`${globals.location.country} ${globals.date.year}`}
     </span>
-  </div>;
+  </div>
+);
 
 export default Title;

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const StyledTheme = styled.h4`
   font-size: 1.2em;
-  color: ${Globals.colors.subheader};
+  color: ${globals.colors.subheader};
   margin: 0 0 0.33em 0;
   text-align: center;
   font-weight: lighter;
@@ -16,11 +16,11 @@ const StyledTheme = styled.h4`
 `;
 
 const Link = styled.a`
-  color: ${Globals.colors.secondary};
+  color: ${globals.colors.secondary};
   text-decoration: none;
 
   &:hover {
-    color: ${Globals.colors.subheader};
+    color: ${globals.colors.subheader};
     text-decoration: underline;
   }
 `;

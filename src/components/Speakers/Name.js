@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const StyledName = styled.h3`
   font-size: 1.7em;
   text-align: center;
-  color: ${Globals.colors.primary};
+  color: ${globals.colors.primary};
   font-weight: light;
   margin: 0.66em 0 0.15em 0;
   line-height: 1;

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import { Title, SubTitle } from './Title';
 import Button from './Button';
 
 const Container = styled.div`
-  background: ${Globals.colors.main};
+  background: ${globals.colors.main};
   width: 100%;
   text-align: center;
 `;
@@ -22,20 +22,20 @@ const ParkName = styled.p`
   font-size: 1.3em;
 `;
 
-const Park = () => !!Globals.park && (
+const Park = () => !!globals.park && (
 <Container>
   <Title title="Estacionamento" />
   <SubTitle title="Estacione em nosso Parceiro" />
 
   <div>
     <ParkName>
-      {`${Globals.park.name} - ${Globals.park.price} das ${
-        Globals.park.hour
+      {`${globals.park.name} - ${globals.park.price} das ${
+        globals.park.hour
       }`}
     </ParkName>
-    <p>{!!Globals.park.phone && `Telefone: ${Globals.park.phone}`}</p>
-    <ParkAddress href={Globals.park.googleMapsLink} light>
-      {Globals.park.fullAddress}
+    <p>{!!globals.park.phone && `Telefone: ${globals.park.phone}`}</p>
+    <ParkAddress href={globals.park.googleMapsLink} light>
+      {globals.park.fullAddress}
     </ParkAddress>
   </div>
 </Container>

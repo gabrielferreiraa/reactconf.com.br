@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 import sizes from './sizes';
 
 const StyledCard = styled.div`
   padding: 0;
-  background-color: ${Globals.colors.white};
+  background-color: ${globals.colors.white};
   border-radius: 0;
   margin: 10px;
   display: flex;
@@ -27,7 +27,7 @@ const Logo = styled.img`
 const Card = ({ sponsor, type }) => (
   <StyledCard type={type}>
     <a
-      href={sponsor.link + Globals.utm}
+      href={sponsor.link + globals.utm}
       target="_blank"
       rel="noopener noreferrer"
     >

@@ -1,5 +1,5 @@
-import quanto from '../../media/images/sponsors/quanto.jpg';
-import ingresse from '../../media/images/sponsors/ingresse.png';
+import quanto from '../../../media/images/sponsors/quanto.jpg';
+import ingresse from '../../../media/images/sponsors/ingresse.png';
 
 export default [
   {

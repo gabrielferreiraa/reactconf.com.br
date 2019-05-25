@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import { css, before } from 'glamor';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import Item from './Item';
 
 const styles = {
   container: css({
-    background: Globals.colors.primary,
-    color: Globals.colors.white,
+    background: globals.colors.primary,
+    color: globals.colors.white,
     width: '100%',
     flexDirection: 'column',
     '@media(min-width: 720px)': {
@@ -34,7 +34,7 @@ const styles = {
   }),
 
   link: css({
-    color: Globals.colors.secondary,
+    color: globals.colors.secondary,
     textDecoration: 'none',
   }),
 
@@ -70,13 +70,15 @@ class Footer extends PureComponent {
           </Item>
           <Item>
             <p className="notranslate">
-              Branding:{' '}
+              Branding:
+              {' '}
               <a {...styles.link} href="https://informatica.sp.senai.br">
                 SENAI
               </a>
             </p>
             <p>
-              Criado com:{' '}
+              Criado com:
+              {' '}
               <a
                 {...styles.link}
                 href="https://github.com/facebookincubator/create-react-app/"
@@ -86,7 +88,8 @@ class Footer extends PureComponent {
               </a>
             </p>
             <p>
-              {' '}<a
+              {' '}
+              <a
                 {...styles.link}
                 href="https://facebook.github.io/react/community/conferences.html"
                 className="notranslate"

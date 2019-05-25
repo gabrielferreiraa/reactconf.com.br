@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react';
 import { css } from 'glamor';
 
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const styles = {
   container: css({
     // alignSelf: 'flex-end',
     display: 'flex',
     margin: '0',
-    color: Globals.colors.white,
+    color: globals.colors.white,
     fontSize: 40,
     flexDirection: 'column',
     alignItems: 'center',
@@ -33,12 +33,8 @@ class Infos extends PureComponent {
   render() {
     return (
       <div {...styles.container}>
-        <p {...styles.header}>
-          {Globals.date.full}
-        </p>
-        <p {...styles.text}>
-          {Globals.location.city}
-        </p>
+        <p {...styles.header}>{globals.date.full}</p>
+        <p {...styles.text}>{globals.location.city}</p>
       </div>
     );
   }

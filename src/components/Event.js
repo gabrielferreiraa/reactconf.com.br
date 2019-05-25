@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 
 import { Title, SubTitle } from './Title';
 import Video from './Video';
 
 const Container = styled.div`
   width: 80%;
-  background: ${Globals.colors.white};
+  background: ${globals.colors.white};
 `;
 
 const Wrapper = styled.div`
@@ -58,8 +58,8 @@ const Event = () => (
       <StyledVideo />
       <Texts>
         <div>
-          <Text>{Globals.event.text}</Text>
-          <Text grey>{Globals.event.subtitle}</Text>
+          <Text>{globals.event.text}</Text>
+          <Text grey>{globals.event.subtitle}</Text>
         </div>
       </Texts>
     </Wrapper>

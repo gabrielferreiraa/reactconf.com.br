@@ -1,9 +1,9 @@
-import you from '../media/images/speakers/anonymous.png';
-import Globals from './Globals';
+import you from '../../media/images/speakers/anonymous.png';
+import globals from '../globals';
 
 /**
  * Retorna um array com os palestrantes, exemplo:
- * 
+ *
  * {
  *    id: 1, //ID de controle
  *    name: '', //Nome do Palestrante
@@ -23,9 +23,9 @@ export default [
     theme: 'Envie sua talk',
     avatar: you,
     worksIn: 'React Brasil',
-    worksLink: Globals.contacts.github,
-    talk: Globals.contacts.c4p,
-    github: Globals.contacts.github,
+    worksLink: globals.contacts.github,
+    talk: globals.contacts.c4p,
+    github: globals.contacts.github,
     isYou: true,
   },
 ];

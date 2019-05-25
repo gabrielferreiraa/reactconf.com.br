@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const StyledTitle = styled.div`
   height: 100px;
@@ -13,7 +13,7 @@ const StyledTitle = styled.div`
 `;
 
 const Text = styled.h1`
-  color: ${({ light }) => (light ? Globals.colors.white : Globals.colors.primary)};
+  color: ${({ light }) => (light ? globals.colors.white : globals.colors.primary)};
 `;
 
 const Title = ({ title, ...props }) => (

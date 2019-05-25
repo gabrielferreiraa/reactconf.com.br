@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import speakers from '../../utils/Speakers';
+import 'react-modal-video/css/modal-video.min.css';
+import ModalVideo from 'react-modal-video';
+
 import Container from './Container';
 import Cards from './Cards';
 import Speaker from './Speaker';
+import { Title } from '../Title';
 
-import Text from '../Text';
-import 'react-modal-video/css/modal-video.min.css';
-import ModalVideo from 'react-modal-video';
+import speakers from '../../utils/data/speakers';
 
 const Speakers = () => {
   const [video, setVideo] = useState('');
   const [isOpen, setOpen] = useState(false);
 
-  const handleSpeakerClick = speaker => {
+  const handleSpeakerClick = (speaker) => {
     if (speaker.videoId) {
       setVideo(speaker.videoId);
       setOpen(true);
@@ -21,7 +22,7 @@ const Speakers = () => {
 
   return (
     <Container>
-      <Text title="Palestrantes" reverse />
+      <Title title="Palestrantes" />
       <Cards>
         {speakers.map(speaker => (
           <Speaker

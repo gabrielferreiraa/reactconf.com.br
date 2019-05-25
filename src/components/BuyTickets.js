@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 import { Title, SubTitle } from './Title';
 
 const Container = styled.div`
-  background-color: ${Globals.colors.secondary};
+  background-color: ${globals.colors.secondary};
   width: 100%;
   padding: 15px;
   text-align: center;
@@ -20,10 +20,10 @@ const BuyTicket = styled(Button)`
 
 const BuyTickets = () => (
   <Container>
-    <Title title={Globals.date.full} />
-    <SubTitle title={`${Globals.date.weekDay}, das ${Globals.date.hour}`} />
+    <Title title={globals.date.full} />
+    <SubTitle title={`${globals.date.weekDay}, das ${globals.date.hour}`} />
 
-    <BuyTicket href={Globals.buyTicketLink} light medium>
+    <BuyTicket href={globals.buyTicketLink} light medium>
       Ingressos aqui
     </BuyTicket>
   </Container>

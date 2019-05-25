@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Title, SubTitle } from '../Title';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 import Slack from './Slack';
 import Github from './Github';
@@ -10,13 +10,13 @@ import Facebook from './Facebook';
 import Twitter from './Twitter';
 
 const Container = styled.div`
-  background-color: ${Globals.colors.white};
+  background-color: ${globals.colors.white};
   width: 100%;
   text-align: center;
 `;
 
 const Link = styled.a`
-  color: ${Globals.colors.primary};
+  color: ${globals.colors.primary};
 `;
 
 const Contact = () => (
@@ -40,20 +40,20 @@ const Contact = () => (
         <br />
         <Link
           target="_blank"
-          href={Globals.contacts.repo}
+          href={globals.contacts.repo}
           rel="noopener noreferrer"
         >
-          {Globals.contacts.repo}
+          {globals.contacts.repo}
         </Link>
       </p>
       <p>
         E-mail:
         <br />
         <Link
-          href={`mailto:${Globals.contacts.email}`}
+          href={`mailto:${globals.contacts.email}`}
           rel="noopener noreferrer"
         >
-          {Globals.contacts.email}
+          {globals.contacts.email}
         </Link>
       </p>
     </div>

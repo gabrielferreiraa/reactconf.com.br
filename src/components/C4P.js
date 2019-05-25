@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Globals from '../utils/Globals';
+import globals from '../utils/globals';
 import { Title } from './Title';
 import Button from './Button';
 
@@ -21,7 +21,7 @@ const C4P = () => (
   <Container>
     <Title title="CALL FOR PAPERS" />
 
-    <SendYourTalk href={Globals.contacts.c4p} big secondary>
+    <SendYourTalk href={globals.contacts.c4p} big secondary>
       Envie sua talk
     </SendYourTalk>
   </Container>

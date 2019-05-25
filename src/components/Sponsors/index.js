@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import sponsors from '../../utils/Sponsors';
+import sponsors from '../../utils/data/sponsors';
 
 import { Title } from '../Title';
 import Cards from './Cards';

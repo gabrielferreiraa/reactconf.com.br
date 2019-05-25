@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 import Button from '../Button';
 
 const TicketHere = styled(Button)`
@@ -18,7 +18,7 @@ const TicketHere = styled(Button)`
 `;
 
 const TicketButton = () => (
-  <TicketHere href={Globals.buyTicketLink}>Ingressos aqui</TicketHere>
+  <TicketHere href={globals.buyTicketLink}>Ingressos aqui</TicketHere>
 );
 
 export default TicketButton;

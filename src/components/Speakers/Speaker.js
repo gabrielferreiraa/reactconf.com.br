@@ -5,13 +5,13 @@ import Avatar from './Avatar';
 import Name from './Name';
 import WorksIn from './WorksIn';
 import Theme from './Theme';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const StyledSpeaker = styled.div`
   width: 230px;
   max-width: 100%;
   padding: 0;
-  background-color: ${Globals.colors.transparent};
+  background-color: ${globals.colors.transparent};
   border-radius: 0;
   margin: 10px 10px 4em;
 `;
@@ -26,7 +26,13 @@ const Speaker = ({ speaker, handleSpeakerClick }) => (
 );
 
 Speaker.propTypes = {
-  speaker: PropTypes.object.isRequired,
+  speaker: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    worksIn: PropTypes.string,
+    worksLink: PropTypes.string,
+    theme: PropTypes.string.isRequired,
+    talk: PropTypes.string,
+  }).isRequired,
   handleSpeakerClick: PropTypes.func.isRequired,
 };
 

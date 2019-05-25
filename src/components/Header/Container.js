@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 import backgroundImage from '../../media/images/vaporwave.jpg';
 
 const StyledContainer = styled.div`
   background: url(${backgroundImage}) no-repeat center / cover;
   background-color: #220132;
-  color: ${Globals.colors.primary};
+  color: ${globals.colors.primary};
   width: 100%;
   min-width: 100%;
   display: flex;

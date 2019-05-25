@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Globals from '../../utils/Globals';
+import globals from '../../utils/globals';
 
 const StyledSubTitle = styled.div`
   height: 70px;
@@ -14,7 +14,7 @@ const StyledSubTitle = styled.div`
 const Text = styled.h3`
   font-size: 1.78em;
   font-weight: lighter;
-  color: ${({ light }) => (light ? Globals.colors.white : Globals.colors.primary)};
+  color: ${({ light }) => (light ? globals.colors.white : globals.colors.primary)};
 `;
 
 const SubTitle = ({ title, ...props }) => (

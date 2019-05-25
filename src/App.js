@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
-import Globals from './utils/Globals';
+import globals from './utils/globals';
 
 import Header from './components/Header';
 import Body from './components/Body';
@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     padding: 0;
     margin: 0;
-    font-family: ${Globals.fonts.default};
-    background: ${Globals.colors.transparent};
+    font-family: ${globals.fonts.default};
+    background: ${globals.colors.transparent};
     overflow-x: hidden;
 
     @media screen and (max-width: 768px) {
