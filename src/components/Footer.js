@@ -60,7 +60,7 @@ class Footer extends PureComponent {
             <p>
               <a
                 {...styles.link}
-                href="https://www.reactconf.com.br/files/react_conf_brasil-codigo_de_conduta.pdf"
+                href="https://github.com/nic/reactconf.com.br/raw/master/public/files/React_ManualConduta.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
