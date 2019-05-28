@@ -24,7 +24,7 @@ const WorksIn = ({ name, link }) => (
         target="_blank"
         className="notranslate"
       >
-        @{name}
+        {`@${name}`}
       </Link>
     )}
   </StyledWorksIn>

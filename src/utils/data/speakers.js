@@ -19,7 +19,7 @@ import globals from '../globals';
 export default [
   {
     id: 1,
-    name: 'Você!',
+    name: 'Palestrante Surpresa!',
     theme: 'Envie sua talk',
     avatar: you,
     worksIn: 'React Brasil',
